@@ -10,13 +10,10 @@ export default function Home() {
   // Initialisation de Mixpanel
   useEffect(() => {
     mixpanel.init("c763b02ec15098b02c46034afde3a6b8", {
-      debug: process.env.NODE_ENV === "development"
-    });
+      debug: process.env.NODE_ENV === "development",
+      track_pageview: true,
+      persistence: "localStorage",
     
-    // Track page view
-    mixpanel.track("Page View", {
-      page: "Home",
-      timestamp: new Date().toISOString()
     });
   }, []);
   
