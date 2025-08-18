@@ -48,9 +48,14 @@ export default function Home() {
               Découvrez l&apos;immobilier lyonnais avec une experte qui connaît chaque quartier 
               et vous accompagne dans vos projets avec professionnalisme et écoute.
             </p>
-            <button className="bg-white text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors duration-300 shadow-lg">
+            <button className="bg-white text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors duration-300 shadow-lg mb-8">
               Estimation Gratuite
             </button>
+            <div className="text-white text-lg">
+              <p className="mb-2">📞 06 19 18 74 33</p>
+              <p className="mb-2">✉️ gabrielle.nicolini@cesaretbrutus.com</p>
+              <p>📍 69009 Lyon</p>
+            </div>
           </div>
         </div>
       </section>
@@ -156,14 +161,19 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Plateau de Saint Rambert */}
-            <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 relative">
-                <span className="text-blue-600 text-xl">🏘️</span>
-                <div className="absolute -top-1 -right-1 bg-white bg-opacity-90 rounded-lg px-2 py-1">
-                  <span className="text-gray-800 text-xs font-semibold">3 200€ - 5 800€/m²</span>
+                          {/* Plateau de Saint Rambert */}
+              <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+                <div className="w-full h-48 rounded-lg mb-4 overflow-hidden relative">
+                  <img
+                    src="/plateau-saint-rambert.jpg"
+                    alt="Plateau de Saint Rambert - Quartier résidentiel calme et familial"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-40"></div>
+                  <div className="absolute bottom-3 right-3 bg-white bg-opacity-95 rounded-lg px-3 py-2 shadow-lg">
+                    <span className="text-gray-800 text-sm font-bold">3 200€ - 5 800€/m²</span>
+                  </div>
                 </div>
-              </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Plateau de Saint Rambert</h3>
               <p className="text-gray-600 mb-4">
                 Quartier résidentiel calme et familial au nord de Lyon. Maisons individuelles, 
