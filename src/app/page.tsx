@@ -208,7 +208,7 @@ export default function Home() {
                 />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-40"></div>
                   <div className="absolute bottom-3 right-3 bg-white bg-opacity-95 rounded-lg px-3 py-2 shadow-lg">
-                    <span className="text-gray-800 text-sm font-bold">2 564€ - 5 454€/m²</span>
+                    <span className="text-gray-800 text-sm font-bold">2 564 - 5 454 €/m²</span>
                   </div>
                 </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Plateau de Saint Rambert</h3>
@@ -234,7 +234,7 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
                 <div className="absolute bottom-3 right-3 bg-white bg-opacity-95 rounded-lg px-3 py-2 shadow-lg">
-                  <span className="text-gray-800 text-sm font-bold">3 024€ - 5 447€/m²</span>
+                  <span className="text-gray-800 text-sm font-bold">3 024 - 5 447 €/m²</span>
                 </div>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Vaise Industrie</h3>
@@ -260,7 +260,7 @@ export default function Home() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-40"></div>
                   <div className="absolute bottom-3 right-3 bg-white bg-opacity-95 rounded-lg px-3 py-2 shadow-lg">
-                    <span className="text-gray-800 text-sm font-bold">1 837€ - 3 544€/m²</span>
+                    <span className="text-gray-800 text-sm font-bold">1 837 - 3 544 €/m²</span>
                   </div>
                 </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Saint Rambert le Vergoin</h3>
@@ -285,7 +285,7 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-40"></div>
                                   <div className="absolute bottom-3 right-3 bg-white bg-opacity-95 rounded-lg px-3 py-2 shadow-lg">
-                    <span className="text-gray-800 text-sm font-bold">2 265€ - 5 280€/m²</span>
+                    <span className="text-gray-800 text-sm font-bold">2 265 - 5 280 €/m²</span>
                   </div>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Vaise</h3>
@@ -311,7 +311,7 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-40"></div>
                 <div className="absolute bottom-3 right-3 bg-white bg-opacity-95 rounded-lg px-3 py-2 shadow-lg">
-                  <span className="text-gray-800 text-sm font-bold">2 079€ - 5 788€/m²</span>
+                  <span className="text-gray-800 text-sm font-bold">2 079 - 5 788 €/m²</span>
                 </div>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Valmy</h3>
@@ -337,7 +337,7 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-40"></div>
                 <div className="absolute bottom-3 right-3 bg-white bg-opacity-95 rounded-lg px-3 py-2 shadow-lg">
-                  <span className="text-gray-800 text-sm font-bold">1 967€ - 4 959€/m²</span>
+                  <span className="text-gray-800 text-sm font-bold">1 967 - 4 959 €/m²</span>
                 </div>
               </div>
               
