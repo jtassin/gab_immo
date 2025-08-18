@@ -290,10 +290,9 @@ export default function Home() {
               </div>
               
               <h3 className="text-xl font-bold text-gray-900 mb-3">Champvert / Gorge de Loup</h3>
-              <p className="text-gray-600 mb-4">
-                Deux quartiers résidentiels complémentaires : <strong>Gorge de Loup</strong> avec ses vues panoramiques 
-                et son altitude, et <strong>Champvert</strong> avec son ambiance familiale et ses espaces verts.
-              </p>
+                              <p className="text-gray-600 mb-4">
+                  Plus accessible que Vaise ou Valmy, c&apos;est un quartier qui se transforme depuis dix ans. Le tissu commercial s&apos;est développé, traditionnellement plutôt familial, le campus René Cassin a redynamisé le quartier.
+                </p>
               
               <div className="text-sm text-gray-500 space-y-2">
                 <p><strong>Gorge de Loup :</strong> 4 200€ - 7 800€/m² • Appartements et maisons • Vue et altitude</p>
@@ -394,7 +393,7 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 Gabrielle Nicolini Immobilier. Tous droits réservés.</p>
+            <p>&copy; 2025 Gabrielle Nicolini Immobilier. Tous droits réservés.</p>
           </div>
         </div>
       </footer>
