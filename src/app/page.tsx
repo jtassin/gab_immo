@@ -376,9 +376,9 @@ export default function Home() {
             <div>
               <h4 className="text-lg font-semibold mb-4">Contact</h4>
               <p className="text-gray-300">
-                04 78 XX XX XX<br />
-                gabrielle@gab-immo.fr<br />
-                69002 Lyon
+                06 19 18 74 33<br />
+                gabrielle.nicolini@cesaretbrutus.com<br />
+                69009 Lyon
               </p>
             </div>
           </div>
