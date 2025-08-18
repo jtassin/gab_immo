@@ -143,9 +143,11 @@ export default function Home() {
             <div className="space-y-6">
               <div className="bg-gray-200 rounded-lg p-8 text-center">
                 <div className="w-48 h-48 rounded-full mx-auto mb-4 overflow-hidden">
-                  <img 
-                    src="https://media.licdn.com/dms/image/v2/C4E03AQEH8slXak4ExQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1623355540760?e=1758153600&v=beta&t=lsQm4o1WOzj_aO2trSohaI3xI3PbM_Hyw2mabmVDrjs"
+                  <Image 
+                    src="/gabrielle-nicolini.jpg"
                     alt="Gabrielle Nicolini - Agent Immobilier"
+                    width={192}
+                    height={192}
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -184,11 +186,14 @@ export default function Home() {
                           {/* Plateau de Saint Rambert */}
               <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
                 <div className="w-full h-48 rounded-lg mb-4 overflow-hidden relative">
-                  <img
-                    src="/plateau-saint-rambert.jpg"
-                    alt="Plateau de Saint Rambert - Quartier résidentiel calme et familial"
-                    className="w-full h-full object-cover"
-                  />
+                                  <Image
+                  src="/plateau-saint-rambert.jpg"
+                  alt="Plateau de Saint Rambert - Quartier résidentiel calme et familial"
+                  width={400}
+                  height={192}
+                  className="w-full h-full object-cover"
+                  priority
+                />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-40"></div>
                   <div className="absolute bottom-3 right-3 bg-white bg-opacity-95 rounded-lg px-3 py-2 shadow-lg">
                     <span className="text-gray-800 text-sm font-bold">2 564€ - 5 454€/m²</span>
@@ -208,9 +213,11 @@ export default function Home() {
             {/* Vaise Industrie */}
             <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
               <div className="w-full h-48 rounded-lg mb-4 overflow-hidden relative">
-                <img 
-                  src="https://mairie9.lyon.fr/sites/mairie9/files/styles/img__700x394__crop_main/public/content/2017-09/Industrie.jpg?itok=UiX92Fq-"
+                <Image 
+                  src="/vaise-industrie.jpg"
                   alt="Vaise Industrie - Quartier en transformation"
+                  width={400}
+                  height={192}
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
@@ -232,9 +239,11 @@ export default function Home() {
                           {/* Saint Rambert le Vergoin */}
               <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
                 <div className="w-full h-48 rounded-lg mb-4 overflow-hidden relative">
-                  <img
+                  <Image
                     src="/vergoin.jpg"
                     alt="Saint Rambert le Vergoin - Parc verdoyant et résidentiel"
+                    width={400}
+                    height={192}
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-40"></div>
@@ -255,9 +264,11 @@ export default function Home() {
             {/* Vaise */}
             <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
               <div className="w-full h-48 rounded-lg mb-4 overflow-hidden relative">
-                <img
+                <Image
                   src="/vaise.jpg"
                   alt="Vaise - Quartier mixte avec commerces et transports"
+                  width={400}
+                  height={192}
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-40"></div>
@@ -279,9 +290,11 @@ export default function Home() {
             {/* Valmy */}
             <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
               <div className="w-full h-48 rounded-lg mb-4 overflow-hidden relative">
-                <img
+                <Image
                   src="/valmy.webp"
                   alt="Valmy - Quartier résidentiel paisible avec espaces verts"
+                  width={400}
+                  height={192}
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-40"></div>
@@ -303,9 +316,11 @@ export default function Home() {
             {/* Champvert */}
             <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
               <div className="w-full h-48 rounded-lg mb-4 overflow-hidden relative">
-                <img
+                <Image
                   src="/champvert.jpg"
                   alt="Champvert / Gorge de Loup - Quartier résidentiel en transformation"
+                  width={400}
+                  height={192}
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-40"></div>
