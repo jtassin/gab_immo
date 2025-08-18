@@ -4,7 +4,7 @@ export default function Home() {
   // Calcul dynamique des années d'expérience depuis 2021
   const startYear = 2021;
   const currentYear = new Date().getFullYear();
-  const yearsOfExperience = currentYear - startYear;
+  const yearsOfExperience = Math.ceil(currentYear - startYear) + 1;
 
   return (
     <div className="min-h-screen bg-white">
