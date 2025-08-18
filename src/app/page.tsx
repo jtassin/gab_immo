@@ -278,7 +278,7 @@ export default function Home() {
                 appartements familiaux et ambiance conviviale pour tous les âges.
               </p>
               <div className="text-sm text-gray-500">
-                <p>• Type : Maisons et appartements</p>
+                <p>• Type : Appartements</p>
                 <p>• Atout : Espaces verts</p>
               </div>
             </div>
