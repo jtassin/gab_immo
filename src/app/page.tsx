@@ -283,37 +283,21 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Gorge de Loup */}
+            {/* Champvert / Gorge de Loup */}
             <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-              <div className="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-pink-600 text-xl">🌄</span>
+              <div className="w-12 h-12 bg-gradient-to-br from-pink-100 to-indigo-100 rounded-lg flex items-center justify-center mb-4 mx-auto">
+                <span className="text-pink-600 text-xl">🏔️</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Gorge de Loup</h3>
+              
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Champvert / Gorge de Loup</h3>
               <p className="text-gray-600 mb-4">
-                Quartier sur les hauteurs avec vue imprenable. Appartements avec terrasses, 
-                maisons de caractère et accès facile aux transports en commun.
+                Deux quartiers résidentiels complémentaires : <strong>Gorge de Loup</strong> avec ses vues panoramiques 
+                et son altitude, et <strong>Champvert</strong> avec son ambiance familiale et ses espaces verts.
               </p>
-              <div className="text-sm text-gray-500">
-                <p>• Prix au m² : 4 200€ - 7 800€</p>
-                <p>• Type : Appartements et maisons</p>
-                <p>• Atout : Vue et altitude</p>
-              </div>
-            </div>
-
-            {/* Champvert */}
-            <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-              <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-indigo-600 text-xl">🏡</span>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Champvert</h3>
-              <p className="text-gray-600 mb-4">
-                Quartier résidentiel calme et familial. Maisons avec jardins, appartements spacieux 
-                et écoles de proximité pour une vie de famille idéale.
-              </p>
-              <div className="text-sm text-gray-500">
-                <p>• Prix au m² : 3 600€ - 6 800€</p>
-                <p>• Type : Maisons et appartements</p>
-                <p>• Atout : Famille et proximité</p>
+              
+              <div className="text-sm text-gray-500 space-y-2">
+                <p><strong>Gorge de Loup :</strong> 4 200€ - 7 800€/m² • Appartements et maisons • Vue et altitude</p>
+                <p><strong>Champvert :</strong> 3 600€ - 6 800€/m² • Maisons et appartements • Famille et proximité</p>
               </div>
             </div>
           </div>
