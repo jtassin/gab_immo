@@ -46,7 +46,7 @@ export default function Home() {
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
                 <a href="#accueil" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Accueil</a>
-                <a href="#agent" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">L&apos;Agent</a>
+                <a href="#agent" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Qui suis je</a>
                 <a href="#quartiers" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Quartiers</a>
                 <a href="#contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
               </div>
@@ -61,7 +61,7 @@ export default function Home() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Votre spécialiste Immobilier à Lyon 9ème
+              Votre Spécialiste Immobilier à Lyon 9ème
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
               Découvrez l&apos;immobilier lyonnais avec une experte qui connaît chaque quartier 
