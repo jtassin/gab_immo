@@ -92,10 +92,13 @@ export default function Home() {
       {/* Section Agent */}
       <section id="agent" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Je vous accompagne de A à Z
-            </h2>
+                      <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Je vous accompagne de A à Z
+              </h2>
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                Gabrielle Nicolini
+              </h3>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Une experte passionnée qui met son savoir-faire au service de vos projets immobiliers
             </p>
@@ -103,8 +106,12 @@ export default function Home() {
           
                     <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <div className="bg-gray-100 rounded-lg p-8 text-center">
-                <div className="w-64 h-76 rounded-lg mx-auto overflow-hidden">
+              <h3 className="text-2xl font-bold text-gray-700 mb-4 text-center italic" style={{ fontFamily: 'var(--font-crimson-text)', fontStyle: 'italic' }}>
+                Gabrielle Nicolini
+              </h3>
+              
+              <div className="text-center">
+                <div className="w-64 h-76 mx-auto overflow-hidden">
                   <Image 
                     src="/Gabrielle_veste_BD-removebg-preview.png"
                     alt="Gabrielle Nicolini - Agent Immobilier"
@@ -129,7 +136,6 @@ export default function Home() {
             </div>
             
             <div className="space-y-6">
-              <h3 className="text-2xl font-bold text-gray-900">Gabrielle Nicolini</h3>
               <p className="text-lg text-gray-700 leading-relaxed">
                 Spécialiste du marché immobilier lyonnais et passionnée par ce métier, je vous propose un accompagnement sur mesure à chaque étape de vos projets immobiliers. Que ce soit pour votre résidence principale, votre résidence secondaire ou un investissement immobilier.
               </p>
