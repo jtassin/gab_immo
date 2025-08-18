@@ -71,8 +71,26 @@ export default function Home() {
             <div className="space-y-6">
               <h3 className="text-2xl font-bold text-gray-900">Gabrielle Nicolini</h3>
               <p className="text-lg text-gray-700 leading-relaxed">
-                Avec {yearsOfExperience} ans d&apos;expérience dans l&apos;immobilier lyonnais, je vous accompagne 
-                dans tous vos projets : achat, vente, location, estimation de biens et investissement immobilier.
+                Spécialiste du marché immobilier lyonnais et passionnée par ce métier, je vous propose un accompagnement sur mesure à chaque étape de vos projets immobiliers.
+              </p>
+              
+              <div className="space-y-2 text-gray-700 mb-4">
+                <div className="flex items-start space-x-2">
+                  <span className="text-blue-600 font-semibold">•</span>
+                  <span><strong>ESTIMATION :</strong> analyse du marché et spécificités de votre bien</span>
+                </div>
+                <div className="flex items-start space-x-2">
+                  <span className="text-blue-600 font-semibold">•</span>
+                  <span><strong>VENTE :</strong> valorisation, négociation et validation de solvabilité</span>
+                </div>
+                <div className="flex items-start space-x-2">
+                  <span className="text-blue-600 font-semibold">•</span>
+                  <span><strong>ACHAT :</strong> définition de vos besoins et accompagnement complet</span>
+                </div>
+              </div>
+              
+              <p className="text-gray-600 text-sm">
+                Nous avons un objectif commun : réaliser votre projet en toute confiance et sérénité.
               </p>
                               <div className="space-y-4">
                   <div className="flex items-center space-x-3">
