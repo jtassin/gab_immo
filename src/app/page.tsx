@@ -101,7 +101,33 @@ export default function Home() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+                    <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <div className="bg-gray-100 rounded-lg p-8 text-center">
+                <div className="w-64 h-76 rounded-lg mx-auto overflow-hidden">
+                  <Image 
+                    src="/Gabrielle_veste_BD-removebg-preview.png"
+                    alt="Gabrielle Nicolini - Agent Immobilier"
+                    width={256}
+                    height={304}
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
+              </div>
+              
+              {/* Statistiques en dessous de la photo */}
+              <div className="grid grid-cols-2 gap-4">
+                <div className="text-center p-4 bg-blue-50 rounded-lg">
+                  <div className="text-2xl font-bold text-blue-600">{yearsOfExperience}+</div>
+                  <div className="text-sm text-gray-600">Années d&apos;expérience</div>
+                </div>
+                <div className="text-center p-4 bg-blue-50 rounded-lg">
+                  <div className="text-2xl font-bold text-blue-600">{estimatedProjects}+</div>
+                  <div className="text-sm text-gray-600">Projets réalisés</div>
+                </div>
+              </div>
+            </div>
+            
             <div className="space-y-6">
               <h3 className="text-2xl font-bold text-gray-900">Gabrielle Nicolini</h3>
               <p className="text-lg text-gray-700 leading-relaxed">
@@ -143,35 +169,6 @@ export default function Home() {
                 <div className="flex items-center space-x-3">
                   <span className="font-semibold text-lg" style={{ color: 'rgb(31, 43, 82)' }}>•</span>
                   <span className="text-gray-700">Transparence et écoute</span>
-                </div>
-              </div>
-
-
-            </div>
-            
-            <div className="space-y-6">
-              <div className="bg-gray-200 rounded-lg p-8 text-center">
-                <div className="w-48 h-48 rounded-full mx-auto mb-4 overflow-hidden">
-                  <Image 
-                    src="/gabrielle-nicolini.jpg"
-                    alt="Gabrielle Nicolini - Agent Immobilier"
-                    width={192}
-                    height={192}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <p className="text-sm text-gray-500">Gabrielle Nicolini</p>
-              </div>
-              
-              {/* Statistiques en dessous du cadre gris */}
-              <div className="grid grid-cols-2 gap-4">
-                <div className="text-center p-4 bg-blue-50 rounded-lg">
-                  <div className="text-2xl font-bold text-blue-600">{yearsOfExperience}+</div>
-                  <div className="text-sm text-gray-600">Années d&apos;expérience</div>
-                </div>
-                <div className="text-center p-4 bg-blue-50 rounded-lg">
-                                  <div className="text-2xl font-bold text-blue-600">{estimatedProjects}+</div>
-                <div className="text-sm text-gray-600">Projets réalisés</div>
                 </div>
               </div>
             </div>
@@ -262,7 +259,7 @@ export default function Home() {
                 </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Saint Rambert le Vergoin</h3>
                               <p className="text-gray-600 mb-4">
-                  A la pointe nord de la commune de Lyon, limitrophe des communes de Saint Cyr au Mont d&apos;Or et de Collonge au Mont d&apos;Or, le Vergoin est un quartier vivant en pleine mutation.
+                                     A la pointe nord de la commune de Lyon, limitrophe des communes de Saint-Cyr-au-Mont-d&apos;Or et de Collonges-au-Mont-d&apos;Or, le Vergoin est un quartier vivant en pleine mutation.
                 </p>
               <div className="text-sm text-gray-500">
                 <p>• Type : Maisons et appartements</p>
