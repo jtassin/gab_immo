@@ -355,6 +355,108 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Section Avis Google */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Avis de nos clients
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Découvrez ce que disent nos clients satisfaits sur Google
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Avis 1 */}
+            <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100">
+              <div className="flex items-center mb-4">
+                <div className="flex text-yellow-400 text-lg">
+                  ★★★★★
+                </div>
+                <span className="ml-2 text-sm text-gray-600">5.0</span>
+              </div>
+              <p className="text-gray-700 mb-4 italic">
+                &ldquo;Gabrielle a été exceptionnelle dans l&apos;accompagnement de notre achat. 
+                Elle connaît parfaitement le marché lyonnais et nous a trouvé exactement 
+                ce que nous cherchions.&rdquo;
+              </p>
+              <div className="flex items-center">
+                <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                  <span className="text-blue-600 font-semibold">M</span>
+                </div>
+                <div>
+                  <p className="font-semibold text-gray-900">Marie L.</p>
+                  <p className="text-sm text-gray-600">Achat appartement Vaise</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Avis 2 */}
+            <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100">
+              <div className="flex items-center mb-4">
+                <div className="flex text-yellow-400 text-lg">
+                  ★★★★★
+                </div>
+                <span className="ml-2 text-sm text-gray-600">5.0</span>
+              </div>
+              <p className="text-gray-700 mb-4 italic">
+                &ldquo;Service impeccable ! Gabrielle a vendu notre bien en moins de 2 mois 
+                au prix que nous souhaitions. Son expertise du quartier Saint Rambert 
+                est remarquable.&rdquo;
+              </p>
+              <div className="flex items-center">
+                <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-3">
+                  <span className="text-green-600 font-semibold">P</span>
+                </div>
+                <div>
+                  <p className="font-semibold text-gray-900">Pierre D.</p>
+                  <p className="text-sm text-gray-600">Vente maison Saint Rambert</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Avis 3 */}
+            <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100">
+              <div className="flex items-center mb-4">
+                <div className="flex text-yellow-400 text-lg">
+                  ★★★★★
+                </div>
+                <span className="ml-2 text-sm text-gray-600">5.0</span>
+              </div>
+              <p className="text-gray-700 mb-4 italic">
+                &ldquo;Un accompagnement personnalisé et professionnel. Gabrielle a su 
+                comprendre nos besoins et nous a guidés dans notre investissement 
+                immobilier à Lyon.&rdquo;
+              </p>
+              <div className="flex items-center">
+                <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mr-3">
+                  <span className="text-purple-600 font-semibold">S</span>
+                </div>
+                <div>
+                  <p className="font-semibold text-gray-900">Sophie M.</p>
+                  <p className="text-sm text-gray-600">Investissement Valmy</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <a 
+              href="https://www.google.com/search?q=Gabrielle+Nicolini+Immobilier+Lyon+avis" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300"
+            >
+              <span className="mr-2">Voir tous nos avis Google</span>
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Section Contact */}
       <section id="contact" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
