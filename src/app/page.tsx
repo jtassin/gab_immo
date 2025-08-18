@@ -174,7 +174,7 @@ export default function Home() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-40"></div>
                   <div className="absolute bottom-3 right-3 bg-white bg-opacity-95 rounded-lg px-3 py-2 shadow-lg">
-                    <span className="text-gray-800 text-sm font-bold">3 200€ - 5 800€/m²</span>
+                    <span className="text-gray-800 text-sm font-bold">??</span>
                   </div>
                 </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Plateau de Saint Rambert</h3>
@@ -222,7 +222,7 @@ export default function Home() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-40"></div>
                   <div className="absolute bottom-3 right-3 bg-white bg-opacity-95 rounded-lg px-3 py-2 shadow-lg">
-                    <span className="text-gray-800 text-sm font-bold">4 800€ - 8 500€/m²</span>
+                    <span className="text-gray-800 text-sm font-bold">1 837€ - 3 544€/m²</span>
                   </div>
                 </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Saint Rambert le Vergoin</h3>
@@ -244,9 +244,9 @@ export default function Home() {
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-40"></div>
-                <div className="absolute bottom-3 right-3 bg-white bg-opacity-95 rounded-lg px-3 py-2 shadow-lg">
-                  <span className="text-gray-800 text-sm font-bold">3 800€ - 6 500€/m²</span>
-                </div>
+                                  <div className="absolute bottom-3 right-3 bg-white bg-opacity-95 rounded-lg px-3 py-2 shadow-lg">
+                    <span className="text-gray-800 text-sm font-bold">??</span>
+                  </div>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Vaise</h3>
               <p className="text-gray-600 mb-4">
@@ -295,7 +295,7 @@ export default function Home() {
               </p>
               
               <div className="text-sm text-gray-500">
-                <p>• Prix au m² : 3 600€ - 6 800€</p>
+                <p>• Prix au m² : ??</p>
                 <p>• Type : Maisons et appartements</p>
                 <p>• Atouts : Transport et prix accessible</p>
               </div>
