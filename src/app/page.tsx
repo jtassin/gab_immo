@@ -184,7 +184,7 @@ export default function Home() {
               </p>
               <div className="text-sm text-gray-500">
                 <p>• Type : Maisons et appartements</p>
-                <p>• Atout : Calme et verdure</p>
+                <p>• Atouts : Calme et verdure</p>
               </div>
             </div>
 
@@ -207,8 +207,8 @@ export default function Home() {
                   Appartements récents, bureaux, espaces de coworking dans un environnement dynamique.
                 </p>
               <div className="text-sm text-gray-500">
-                <p>• Type : appartements</p>
-                <p>• Atout : Modernité et dynamisme</p>
+                <p>• Type : Appartements (principalement récents)</p>
+                <p>• Atouts : Modernité et dynamisme</p>
               </div>
             </div>
 
@@ -231,7 +231,7 @@ export default function Home() {
                 </p>
               <div className="text-sm text-gray-500">
                 <p>• Type : Maisons et appartements</p>
-                <p>• Atout : Vue panoramique</p>
+                <p>• Atouts : Verdure et prix accessible</p>
               </div>
             </div>
 
@@ -255,7 +255,7 @@ export default function Home() {
               </p>
               <div className="text-sm text-gray-500">
                 <p>• Type : Appartements et maisons</p>
-                <p>• Atout : Transport et commerces</p>
+                <p>• Atouts : Transport et commerces</p>
               </div>
             </div>
 
