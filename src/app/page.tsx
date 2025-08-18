@@ -253,8 +253,16 @@ export default function Home() {
 
             {/* Valmy */}
             <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-              <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-teal-600 text-xl">🌿</span>
+              <div className="w-full h-48 rounded-lg mb-4 overflow-hidden relative">
+                <img
+                  src="/valmy.webp"
+                  alt="Valmy - Quartier résidentiel paisible avec espaces verts"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-40"></div>
+                <div className="absolute bottom-3 right-3 bg-white bg-opacity-95 rounded-lg px-3 py-2 shadow-lg">
+                  <span className="text-gray-800 text-sm font-bold">3 400€ - 5 900€/m²</span>
+                </div>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Valmy</h3>
               <p className="text-gray-600 mb-4">
@@ -262,7 +270,6 @@ export default function Home() {
                 appartements familiaux et ambiance conviviale pour tous les âges.
               </p>
               <div className="text-sm text-gray-500">
-                <p>• Prix au m² : 3 400€ - 5 900€</p>
                 <p>• Type : Maisons et appartements</p>
                 <p>• Atout : Espaces verts</p>
               </div>
