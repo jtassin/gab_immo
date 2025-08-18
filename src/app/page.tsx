@@ -76,15 +76,15 @@ export default function Home() {
               
               <div className="space-y-3 text-gray-700 mt-6 mb-6">
                 <div className="flex items-start space-x-3">
-                  <span className="text-blue-600 font-semibold text-lg">•</span>
+                  <span className="font-semibold text-lg" style={{ color: 'rgb(31, 43, 82)' }}>•</span>
                   <span><strong>ESTIMATION :</strong> analyse du marché et spécificités de votre bien</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <span className="text-blue-600 font-semibold text-lg">•</span>
+                  <span className="font-semibold text-lg" style={{ color: 'rgb(31, 43, 82)' }}>•</span>
                   <span><strong>VENTE :</strong> valorisation, négociation et validation de solvabilité</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <span className="text-blue-600 font-semibold text-lg">•</span>
+                  <span className="font-semibold text-lg" style={{ color: 'rgb(31, 43, 82)' }}>•</span>
                   <span><strong>ACHAT :</strong> définition de vos besoins et accompagnement complet</span>
                 </div>
               </div>
@@ -99,15 +99,15 @@ export default function Home() {
 
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                  <span className="font-semibold text-lg" style={{ color: 'rgb(31, 43, 82)' }}>•</span>
                   <span className="text-gray-700">Expertise locale approfondie</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                  <span className="font-semibold text-lg" style={{ color: 'rgb(31, 43, 82)' }}>•</span>
                   <span className="text-gray-700">Accompagnement personnalisé</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                  <span className="font-semibold text-lg" style={{ color: 'rgb(31, 43, 82)' }}>•</span>
                   <span className="text-gray-700">Transparence et écoute</span>
                 </div>
               </div>
