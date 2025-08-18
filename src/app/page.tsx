@@ -285,8 +285,16 @@ export default function Home() {
 
             {/* Champvert */}
             <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-              <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-indigo-600 text-xl">🏡</span>
+              <div className="w-full h-48 rounded-lg mb-4 overflow-hidden relative">
+                <img
+                  src="/champvert.jpg"
+                  alt="Champvert / Gorge de Loup - Quartier résidentiel en transformation"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-40"></div>
+                <div className="absolute bottom-3 right-3 bg-white bg-opacity-95 rounded-lg px-3 py-2 shadow-lg">
+                  <span className="text-gray-800 text-sm font-bold">??</span>
+                </div>
               </div>
               
               <h3 className="text-xl font-bold text-gray-900 mb-3">Champvert / Gorge de Loup</h3>
@@ -295,7 +303,6 @@ export default function Home() {
               </p>
               
               <div className="text-sm text-gray-500">
-                <p>• Prix au m² : ??</p>
                 <p>• Type : Maisons et appartements</p>
                 <p>• Atouts : Transport et prix accessible</p>
               </div>
