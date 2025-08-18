@@ -402,8 +402,30 @@ export default function Home() {
                   &ldquo;{avis.commentaire}&rdquo;
                 </p>
                 <div className="flex items-center">
-                  <div className={`w-10 h-10 bg-${avis.couleur}-100 rounded-full flex items-center justify-center mr-3`}>
-                    <span className={`text-${avis.couleur}-600 font-semibold`}>{avis.initiale}</span>
+                  <div className={`w-10 h-10 rounded-full flex items-center justify-center mr-3 ${
+                    avis.couleur === 'blue' ? 'bg-blue-100' :
+                    avis.couleur === 'green' ? 'bg-green-100' :
+                    avis.couleur === 'purple' ? 'bg-purple-100' :
+                    avis.couleur === 'indigo' ? 'bg-indigo-100' :
+                    avis.couleur === 'pink' ? 'bg-pink-100' :
+                    avis.couleur === 'orange' ? 'bg-orange-100' :
+                    avis.couleur === 'teal' ? 'bg-teal-100' :
+                    avis.couleur === 'red' ? 'bg-red-100' :
+                    'bg-gray-100'
+                  }`}>
+                    <span className={`font-semibold ${
+                      avis.couleur === 'blue' ? 'text-blue-600' :
+                      avis.couleur === 'green' ? 'text-green-600' :
+                      avis.couleur === 'purple' ? 'text-purple-600' :
+                      avis.couleur === 'indigo' ? 'text-indigo-600' :
+                      avis.couleur === 'pink' ? 'text-pink-600' :
+                      avis.couleur === 'orange' ? 'text-orange-600' :
+                      avis.couleur === 'teal' ? 'text-teal-600' :
+                      avis.couleur === 'red' ? 'text-red-600' :
+                      'text-gray-600'
+                    }`}>
+                      {avis.initiale}
+                    </span>
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900">{avis.client}</p>
@@ -416,7 +438,7 @@ export default function Home() {
 
           <div className="text-center mt-12">
             <a 
-              href="https://www.google.com/search?q=Gabrielle+Nicolini+Immobilier+Lyon+avis" 
+              href="https://www.google.com/search?sca_esv=0cad35c59d313fc9&sxsrf=AE3TifPi0_6nr3p25xZfjiYgXLggA6pBmA:1755554167296&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-EyM6GHPHcb_yi2l6tgzcRUFiCvLZpMzTQz1rzMYJhDSJR7X6AvjfnHDdYEdcNcje_T19tU8Vm41BLwzml6X4lSrh6F1ccExDhmJjY9EsmAIC2pw-gQ%3D%3D&q=Gabrielle+Nicolini+-+Immobilier+Avis&sa=X&ved=2ahUKEwiQipr0rJWPAxUTfqQEHeBGO8UQ0bkNegQIQRAE&biw=1100&bih=823&dpr=2" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300"

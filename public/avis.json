@@ -3,74 +3,50 @@
     {
       "id": 1,
       "note": 5,
-      "commentaire": "Gabrielle a été exceptionnelle dans l'accompagnement de notre achat. Elle connaît parfaitement le marché lyonnais et nous a trouvé exactement ce que nous cherchions.",
-      "client": "Marie L.",
-      "transaction": "Achat appartement Vaise",
-      "initiale": "M",
-      "couleur": "blue"
-    },
-    {
-      "id": 2,
-      "note": 5,
-      "commentaire": "Service impeccable ! Gabrielle a vendu notre bien en moins de 2 mois au prix que nous souhaitions. Son expertise du quartier Saint Rambert est remarquable.",
-      "client": "Pierre D.",
-      "transaction": "Vente maison Saint Rambert",
-      "initiale": "P",
+      "commentaire": "Super accompagnement dans la vente de mon appartement !\nMme Nicolini a toujours été disponible et en plus très sympathique !",
+      "client": "Nicolas L.",
+      "initiale": "NL",
       "couleur": "green"
     },
     {
       "id": 3,
       "note": 5,
-      "commentaire": "Un accompagnement personnalisé et professionnel. Gabrielle a su comprendre nos besoins et nous a guidés dans notre investissement immobilier à Lyon.",
-      "client": "Sophie M.",
-      "transaction": "Investissement Valmy",
-      "initiale": "S",
+      "commentaire": "Mme Nicolini est très professionnelle et nous a expliqué toutes les démarches. Nous lui avons fait confiance et notre appartement s'est vendue très rapidement et au prix, sans négociation! Merci encore",
+      "client": "Leslie M.",
+      "initiale": "LM",
+      "couleur": "pink"
+    },
+    {
+      "id": 4,
+      "note": 5,
+      "commentaire": "Je recommande +++ Gabrielle Nicolini qui nous a accompagnés dans notre projet de vente immobilière. Merci Gabrielle pour votre écoute, votre expertise et votre professionnalisme !!!",
+      "client": "Julie M.",
+      "initiale": "JM",
       "couleur": "purple"
     },
     {
       "id": 4,
       "note": 5,
-      "commentaire": "Excellente négociatrice ! Gabrielle nous a permis d'acheter notre appartement à un prix très intéressant. Son réseau dans le quartier de Vaise est impressionnant.",
-      "client": "Thomas R.",
-      "transaction": "Achat appartement Vaise",
-      "initiale": "T",
-      "couleur": "indigo"
+      "commentaire": "Nous sommes passés par Gabrielle pour la vente de notre appartement et nous sommes trés contents de l'avoir fait, Gabrielle est trés professionnelle, elle facilite toutes les démarches et nous a mis en relation avec des professionnels. L' appartement s'est vendu en quelques jours seulement. Je recommande Gabrielle les yeux fermés.",
+      "client": "Fatna D.",
+      "initiale": "FD",
+      "couleur": "brown"
     },
     {
       "id": 5,
       "note": 5,
-      "commentaire": "Professionnelle et à l'écoute. Gabrielle a su valoriser notre bien au maximum et nous a accompagnés jusqu'à la signature finale. Je recommande vivement !",
-      "client": "Claire B.",
-      "transaction": "Vente appartement Plateau Saint Rambert",
-      "initiale": "C",
-      "couleur": "pink"
-    },
-    {
-      "id": 6,
-      "note": 5,
-      "commentaire": "Une agente qui connaît vraiment son métier. Gabrielle nous a trouvé la perle rare dans le quartier Champvert. Son expertise locale est un vrai plus.",
-      "client": "Marc F.",
-      "transaction": "Achat maison Champvert",
-      "initiale": "M",
-      "couleur": "orange"
-    },
-    {
-      "id": 7,
-      "note": 5,
-      "commentaire": "Service client au top ! Gabrielle répond toujours rapidement et nous tient informés à chaque étape. Notre achat s'est déroulé parfaitement.",
-      "client": "Julie K.",
-      "transaction": "Achat appartement Valmy",
-      "initiale": "J",
-      "couleur": "teal"
-    },
-    {
-      "id": 8,
-      "note": 5,
-      "commentaire": "Une vraie experte du marché lyonnais. Gabrielle nous a conseillés sur le bon moment pour vendre et nous a permis de maximiser notre plus-value.",
-      "client": "Nicolas P.",
-      "transaction": "Vente appartement Vaise Industrie",
-      "initiale": "N",
+      "commentaire": "Nous avons été ravie des services de Gabrielle!!! Très sympathique et professionnelle, de très bons conseils même en agencement!!! Je conseillerai Gabrielle les yeux fermés!",
+      "client": "Donald C.",
+      "initiale": "DC",
       "couleur": "red"
+    },
+    {
+      "id": 5,
+      "note": 5,
+      "commentaire": "Sans hésitation, je recommande Gabrielle Nicolini. Dans le cadre de mon achat immobilier lyonnais, elle a été d'un grand professionnalisme du debut jusqu'à la fin et m'a beaucoup aidé dans certains démarches (recommandation d'un courtier, notaire...). Sans oublier, qu'elle est toujours de bons conseils 👍",
+      "client": "Elisa C.",
+      "initiale": "EC",
+      "couleur": "purple"
     }
   ]
 }
