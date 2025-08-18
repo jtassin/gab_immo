@@ -72,7 +72,7 @@ export default function Home() {
               <h3 className="text-2xl font-bold text-gray-900">Gabrielle Nicolini</h3>
               <p className="text-lg text-gray-700 leading-relaxed">
                 Avec {yearsOfExperience} ans d&apos;expérience dans l&apos;immobilier lyonnais, je vous accompagne 
-                dans tous vos projets : achat, vente, location et estimation de biens.
+                dans tous vos projets : achat, vente, location, estimation de biens et investissement immobilier.
               </p>
                               <div className="space-y-4">
                   <div className="flex items-center space-x-3">
