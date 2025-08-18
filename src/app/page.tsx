@@ -1,10 +1,24 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import mixpanel from "mixpanel-browser";
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  
+  // Initialisation de Mixpanel
+  useEffect(() => {
+    mixpanel.init("c763b02ec15098b02c46034afde3a6b8", {
+      debug: process.env.NODE_ENV === "development"
+    });
+    
+    // Track page view
+    mixpanel.track("Page View", {
+      page: "Home",
+      timestamp: new Date().toISOString()
+    });
+  }, []);
   
   // Calcul dynamique des années d'expérience depuis janvier 2021
   const startYear = 2021;
@@ -47,14 +61,20 @@ export default function Home() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Votre agent experte en Immobilier à Lyon 9
+              Votre spécialiste Immobilier à Lyon 9ème
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
               Découvrez l&apos;immobilier lyonnais avec une experte qui connaît chaque quartier 
               et vous accompagne dans vos projets avec professionnalisme et écoute.
             </p>
             <button 
-              onClick={() => setIsModalOpen(true)}
+              onClick={() => {
+                setIsModalOpen(true);
+                mixpanel.track("CTA Clicked", {
+                  button: "Estimation Gratuite",
+                  location: "Hero Section"
+                });
+              }}
               className="bg-white text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors duration-300 shadow-lg cursor-pointer"
             >
               Estimation Gratuite
@@ -362,7 +382,13 @@ export default function Home() {
                 Planifiez une consultation gratuite pour discuter de votre projet immobilier.
               </p>
               <button 
-                onClick={() => setIsModalOpen(true)}
+                onClick={() => {
+                  setIsModalOpen(true);
+                  mixpanel.track("CTA Clicked", {
+                    button: "Réserver un créneau",
+                    location: "Contact Section"
+                  });
+                }}
                 className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300 cursor-pointer"
               >
                 Réserver un créneau
@@ -413,7 +439,13 @@ export default function Home() {
             <div className="flex justify-between items-center mb-6">
               <h3 className="text-2xl font-bold text-gray-900">Contactez Gabrielle</h3>
               <button
-                onClick={() => setIsModalOpen(false)}
+                onClick={() => {
+                  setIsModalOpen(false);
+                  mixpanel.track("Modal Closed", {
+                    modal: "Contact",
+                    duration: "N/A" // Vous pourriez calculer la durée d'ouverture
+                  });
+                }}
                 className="text-gray-400 hover:text-gray-600 text-2xl font-bold"
               >
                 ×
