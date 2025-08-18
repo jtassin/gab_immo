@@ -92,20 +92,25 @@ export default function Home() {
               <p className="text-gray-700 text-base leading-relaxed">
                 Nous avons un objectif commun : réaliser votre projet en toute confiance et sérénité.
               </p>
-                              <div className="space-y-4">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    <span className="text-gray-700">Expertise locale approfondie</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    <span className="text-gray-700">Accompagnement personnalisé</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    <span className="text-gray-700">Transparence et écoute</span>
-                  </div>
+
+              <p className="text-gray-600 text-base mt-4">
+                Mes atouts pour vous accompagner :
+              </p>
+
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                  <span className="text-gray-700">Expertise locale approfondie</span>
                 </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                  <span className="text-gray-700">Accompagnement personnalisé</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                  <span className="text-gray-700">Transparence et écoute</span>
+                </div>
+              </div>
 
 
             </div>
