@@ -28,8 +28,8 @@ export default function Home() {
   const monthsOfActivity = (currentYear - startYear) * 12 + (currentMonth - startMonth);
   const yearsOfExperience = Math.ceil(currentYear - startYear) + 1;
   
-  // Calcul des transactions (1.2 par mois d'activité)
-  const estimatedTransactions = Math.round(monthsOfActivity * 1.2);
+  // Calcul des projets réalisés (1.2 par mois d'activité, multiplié par 2)
+  const estimatedProjects = Math.round(monthsOfActivity * 1.2 * 2); // 1.2 projets par mois, multiplié par 2
 
   return (
     <div className="min-h-screen bg-white">
@@ -159,8 +159,8 @@ export default function Home() {
                   <div className="text-sm text-gray-600">Années d&apos;expérience</div>
                 </div>
                 <div className="text-center p-4 bg-blue-50 rounded-lg">
-                  <div className="text-2xl font-bold text-blue-600">{estimatedTransactions}+</div>
-                  <div className="text-sm text-gray-600">Transactions réussies</div>
+                                  <div className="text-2xl font-bold text-blue-600">{estimatedProjects}+</div>
+                <div className="text-sm text-gray-600">Projets réalisés</div>
                 </div>
               </div>
             </div>
