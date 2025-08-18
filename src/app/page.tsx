@@ -107,28 +107,32 @@ export default function Home() {
                   </div>
                 </div>
 
-                {/* Statistiques dynamiques */}
-                <div className="grid grid-cols-2 gap-4 pt-4">
-                  <div className="text-center p-4 bg-blue-50 rounded-lg">
-                    <div className="text-2xl font-bold text-blue-600">{yearsOfExperience}+</div>
-                    <div className="text-sm text-gray-600">Années d&apos;expérience</div>
-                  </div>
-                  <div className="text-center p-4 bg-blue-50 rounded-lg">
-                    <div className="text-2xl font-bold text-blue-600">{estimatedTransactions}+</div>
-                    <div className="text-sm text-gray-600">Transactions réussies</div>
-                  </div>
-                </div>
+
             </div>
             
-            <div className="bg-gray-200 rounded-lg p-8 text-center">
-              <div className="w-48 h-48 rounded-full mx-auto mb-4 overflow-hidden">
-                <img 
-                  src="https://media.licdn.com/dms/image/v2/C4E03AQEH8slXak4ExQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1623355540760?e=1758153600&v=beta&t=lsQm4o1WOzj_aO2trSohaI3xI3PbM_Hyw2mabmVDrjs"
-                  alt="Gabrielle Nicolini - Agent Immobilier"
-                  className="w-full h-full object-cover"
-                />
+            <div className="space-y-6">
+              <div className="bg-gray-200 rounded-lg p-8 text-center">
+                <div className="w-48 h-48 rounded-full mx-auto mb-4 overflow-hidden">
+                  <img 
+                    src="https://media.licdn.com/dms/image/v2/C4E03AQEH8slXak4ExQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1623355540760?e=1758153600&v=beta&t=lsQm4o1WOzj_aO2trSohaI3xI3PbM_Hyw2mabmVDrjs"
+                    alt="Gabrielle Nicolini - Agent Immobilier"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <p className="text-sm text-gray-500">Gabrielle Nicolini</p>
               </div>
-              <p className="text-sm text-gray-500">Gabrielle Nicolini</p>
+              
+              {/* Statistiques en dessous du cadre gris */}
+              <div className="grid grid-cols-2 gap-4">
+                <div className="text-center p-4 bg-blue-50 rounded-lg">
+                  <div className="text-2xl font-bold text-blue-600">{yearsOfExperience}+</div>
+                  <div className="text-sm text-gray-600">Années d&apos;expérience</div>
+                </div>
+                <div className="text-center p-4 bg-blue-50 rounded-lg">
+                  <div className="text-2xl font-bold text-blue-600">{estimatedTransactions}+</div>
+                  <div className="text-sm text-gray-600">Transactions réussies</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
