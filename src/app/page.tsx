@@ -28,8 +28,8 @@ export default function Home() {
   const monthsOfActivity = (currentYear - startYear) * 12 + (currentMonth - startMonth);
   const yearsOfExperience = Math.ceil(currentYear - startYear) + 1;
   
-  // Calcul des projets réalisés (1.2 par mois d'activité, multiplié par 2)
-  const estimatedProjects = Math.round(monthsOfActivity * 1.2 * 2); // 1.2 projets par mois, multiplié par 2
+  // Calcul des projets réalisés (1.2 par mois d'activité, multiplié par 2, arrondi à la dizaine)
+  const estimatedProjects = Math.round((monthsOfActivity * 1.2 * 2) / 10) * 10; // 1.2 projets par mois, multiplié par 2, arrondi à la dizaine
 
   return (
     <div className="min-h-screen bg-white">
