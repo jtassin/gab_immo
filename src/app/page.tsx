@@ -279,24 +279,25 @@ export default function Home() {
               </p>
               <div className="text-sm text-gray-500">
                 <p>• Type : Appartements</p>
-                <p>• Atout : Espaces verts</p>
+                <p>• Atouts : Résidentiel, calme et transport</p>
               </div>
             </div>
 
-            {/* Champvert / Gorge de Loup */}
+            {/* Champvert */}
             <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-              <div className="w-12 h-12 bg-gradient-to-br from-pink-100 to-indigo-100 rounded-lg flex items-center justify-center mb-4 mx-auto">
-                <span className="text-pink-600 text-xl">🏔️</span>
+              <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+                <span className="text-indigo-600 text-xl">🏡</span>
               </div>
               
               <h3 className="text-xl font-bold text-gray-900 mb-3">Champvert / Gorge de Loup</h3>
-                              <p className="text-gray-600 mb-4">
-                  Plus accessible que Vaise ou Valmy, c&apos;est un quartier qui se transforme depuis dix ans. Le tissu commercial s&apos;est développé, traditionnellement plutôt familial, le campus René Cassin a redynamisé le quartier.
-                </p>
+              <p className="text-gray-600 mb-4">
+                Plus accessible que Vaise ou Valmy, c&apos;est un quartier qui se transforme depuis dix ans. Le tissu commercial s&apos;est développé, traditionnellement plutôt familial, le campus René Cassin a redynamisé le quartier.
+              </p>
               
-              <div className="text-sm text-gray-500 space-y-2">
-                <p><strong>Gorge de Loup :</strong> 4 200€ - 7 800€/m² • Appartements et maisons • Vue et altitude</p>
-                <p><strong>Champvert :</strong> 3 600€ - 6 800€/m² • Maisons et appartements • Famille et proximité</p>
+              <div className="text-sm text-gray-500">
+                <p>• Prix au m² : 3 600€ - 6 800€</p>
+                <p>• Type : Maisons et appartements</p>
+                <p>• Atouts : Transport et prix accessible</p>
               </div>
             </div>
           </div>
