@@ -149,11 +149,11 @@ export default function Home() {
                 </div>
               </div>
               
-              <p className="text-gray-700 text-base leading-relaxed">
-                Nous avons un objectif commun : réaliser votre projet en toute confiance et sérénité.
+              <p className="text-gray-600 text-base mt-4">
+                Mes atouts pour vous accompagner :
               </p>
 
-              <div className="space-y-3 text-gray-700 mt-6 mb-6">
+              <div className="space-y-3 text-gray-700 mt-4 mb-6">
                 <div className="flex items-start space-x-3">
                   <span className="font-semibold text-lg" style={{ color: 'rgb(31, 43, 82)' }}>•</span>
                   <span><strong>EXPERTISE LOCALE :</strong> connaissance approfondie du marché lyonnais</span>
@@ -167,6 +167,10 @@ export default function Home() {
                   <span><strong>TRANSPARENCE ET ÉCOUTE :</strong> relation de confiance et communication claire</span>
                 </div>
               </div>
+
+              <p className="text-gray-700 text-base leading-relaxed">
+                Nous avons un objectif commun : réaliser votre projet en toute confiance et sérénité.
+              </p>
             </div>
           </div>
         </div>
