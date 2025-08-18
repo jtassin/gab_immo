@@ -189,10 +189,10 @@ export default function Home() {
                 </div>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Vaise Industrie</h3>
-              <p className="text-gray-600 mb-4">
-                Quartier en pleine transformation, anciennement industriel.
-                Appartements récents, bureaux espaces de coworking dans un environnement dynamique.
-              </p>
+                              <p className="text-gray-600 mb-4">
+                  Quartier en pleine transformation, anciennement industriel.
+                  Appartements récents, bureaux, espaces de coworking dans un environnement dynamique.
+                </p>
               <div className="text-sm text-gray-500">
                 <p>• Type : appartements</p>
                 <p>• Atout : Modernité et dynamisme</p>
