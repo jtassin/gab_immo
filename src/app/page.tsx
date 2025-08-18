@@ -153,22 +153,18 @@ export default function Home() {
                 Nous avons un objectif commun : réaliser votre projet en toute confiance et sérénité.
               </p>
 
-              <p className="text-gray-600 text-base mt-4">
-                Mes atouts pour vous accompagner :
-              </p>
-
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
+              <div className="space-y-3 text-gray-700 mt-6 mb-6">
+                <div className="flex items-start space-x-3">
                   <span className="font-semibold text-lg" style={{ color: 'rgb(31, 43, 82)' }}>•</span>
-                  <span className="text-gray-700">Expertise locale approfondie</span>
+                  <span><strong>EXPERTISE LOCALE :</strong> connaissance approfondie du marché lyonnais</span>
                 </div>
-                <div className="flex items-center space-x-3">
+                <div className="flex items-start space-x-3">
                   <span className="font-semibold text-lg" style={{ color: 'rgb(31, 43, 82)' }}>•</span>
-                  <span className="text-gray-700">Accompagnement personnalisé</span>
+                  <span><strong>ACCOMPAGNEMENT PERSONNALISÉ :</strong> suivi sur mesure de vos projets</span>
                 </div>
-                <div className="flex items-center space-x-3">
+                <div className="flex items-start space-x-3">
                   <span className="font-semibold text-lg" style={{ color: 'rgb(31, 43, 82)' }}>•</span>
-                  <span className="text-gray-700">Transparence et écoute</span>
+                  <span><strong>TRANSPARENCE ET ÉCOUTE :</strong> relation de confiance et communication claire</span>
                 </div>
               </div>
             </div>
