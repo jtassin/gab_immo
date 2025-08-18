@@ -1,0 +1,76 @@
+{
+  "avis": [
+    {
+      "id": 1,
+      "note": 5,
+      "commentaire": "Gabrielle a été exceptionnelle dans l'accompagnement de notre achat. Elle connaît parfaitement le marché lyonnais et nous a trouvé exactement ce que nous cherchions.",
+      "client": "Marie L.",
+      "transaction": "Achat appartement Vaise",
+      "initiale": "M",
+      "couleur": "blue"
+    },
+    {
+      "id": 2,
+      "note": 5,
+      "commentaire": "Service impeccable ! Gabrielle a vendu notre bien en moins de 2 mois au prix que nous souhaitions. Son expertise du quartier Saint Rambert est remarquable.",
+      "client": "Pierre D.",
+      "transaction": "Vente maison Saint Rambert",
+      "initiale": "P",
+      "couleur": "green"
+    },
+    {
+      "id": 3,
+      "note": 5,
+      "commentaire": "Un accompagnement personnalisé et professionnel. Gabrielle a su comprendre nos besoins et nous a guidés dans notre investissement immobilier à Lyon.",
+      "client": "Sophie M.",
+      "transaction": "Investissement Valmy",
+      "initiale": "S",
+      "couleur": "purple"
+    },
+    {
+      "id": 4,
+      "note": 5,
+      "commentaire": "Excellente négociatrice ! Gabrielle nous a permis d'acheter notre appartement à un prix très intéressant. Son réseau dans le quartier de Vaise est impressionnant.",
+      "client": "Thomas R.",
+      "transaction": "Achat appartement Vaise",
+      "initiale": "T",
+      "couleur": "indigo"
+    },
+    {
+      "id": 5,
+      "note": 5,
+      "commentaire": "Professionnelle et à l'écoute. Gabrielle a su valoriser notre bien au maximum et nous a accompagnés jusqu'à la signature finale. Je recommande vivement !",
+      "client": "Claire B.",
+      "transaction": "Vente appartement Plateau Saint Rambert",
+      "initiale": "C",
+      "couleur": "pink"
+    },
+    {
+      "id": 6,
+      "note": 5,
+      "commentaire": "Une agente qui connaît vraiment son métier. Gabrielle nous a trouvé la perle rare dans le quartier Champvert. Son expertise locale est un vrai plus.",
+      "client": "Marc F.",
+      "transaction": "Achat maison Champvert",
+      "initiale": "M",
+      "couleur": "orange"
+    },
+    {
+      "id": 7,
+      "note": 5,
+      "commentaire": "Service client au top ! Gabrielle répond toujours rapidement et nous tient informés à chaque étape. Notre achat s'est déroulé parfaitement.",
+      "client": "Julie K.",
+      "transaction": "Achat appartement Valmy",
+      "initiale": "J",
+      "couleur": "teal"
+    },
+    {
+      "id": 8,
+      "note": 5,
+      "commentaire": "Une vraie experte du marché lyonnais. Gabrielle nous a conseillés sur le bon moment pour vendre et nous a permis de maximiser notre plus-value.",
+      "client": "Nicolas P.",
+      "transaction": "Vente appartement Vaise Industrie",
+      "initiale": "N",
+      "couleur": "red"
+    }
+  ]
+}

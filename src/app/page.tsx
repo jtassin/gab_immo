@@ -4,8 +4,19 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import mixpanel from "mixpanel-browser";
 
+interface Avis {
+  id: number;
+  note: number;
+  commentaire: string;
+  client: string;
+  transaction: string;
+  initiale: string;
+  couleur: string;
+}
+
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [avisAleatoires, setAvisAleatoires] = useState<Avis[]>([]);
   
   // Initialisation de Mixpanel
   useEffect(() => {
@@ -15,6 +26,16 @@ export default function Home() {
       persistence: "localStorage",
       autocapture:true
     });
+
+    // Charger et sélectionner 3 avis au hasard
+    fetch('/avis.json')
+      .then(response => response.json())
+      .then(data => {
+        const avis = data.avis;
+        const avisMelanges = [...avis].sort(() => Math.random() - 0.5);
+        setAvisAleatoires(avisMelanges.slice(0, 3));
+      })
+      .catch(error => console.error('Erreur lors du chargement des avis:', error));
   }, []);
   
   // Calcul dynamique des années d'expérience depuis janvier 2021
@@ -369,77 +390,28 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Avis 1 */}
-            <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100">
-              <div className="flex items-center mb-4">
-                <div className="flex text-yellow-400 text-lg">
-                  ★★★★★
+            {avisAleatoires.map((avis) => (
+              <div key={avis.id} className="bg-white rounded-lg shadow-lg p-6 border border-gray-100">
+                <div className="flex items-center mb-4">
+                  <div className="flex text-yellow-400 text-lg">
+                    {'★'.repeat(avis.note)}
+                  </div>
+                  <span className="ml-2 text-sm text-gray-600">{avis.note}.0</span>
                 </div>
-                <span className="ml-2 text-sm text-gray-600">5.0</span>
-              </div>
-              <p className="text-gray-700 mb-4 italic">
-                &ldquo;Gabrielle a été exceptionnelle dans l&apos;accompagnement de notre achat. 
-                Elle connaît parfaitement le marché lyonnais et nous a trouvé exactement 
-                ce que nous cherchions.&rdquo;
-              </p>
-              <div className="flex items-center">
-                <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
-                  <span className="text-blue-600 font-semibold">M</span>
-                </div>
-                <div>
-                  <p className="font-semibold text-gray-900">Marie L.</p>
-                  <p className="text-sm text-gray-600">Achat appartement Vaise</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Avis 2 */}
-            <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100">
-              <div className="flex items-center mb-4">
-                <div className="flex text-yellow-400 text-lg">
-                  ★★★★★
-                </div>
-                <span className="ml-2 text-sm text-gray-600">5.0</span>
-              </div>
-              <p className="text-gray-700 mb-4 italic">
-                &ldquo;Service impeccable ! Gabrielle a vendu notre bien en moins de 2 mois 
-                au prix que nous souhaitions. Son expertise du quartier Saint Rambert 
-                est remarquable.&rdquo;
-              </p>
-              <div className="flex items-center">
-                <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                  <span className="text-green-600 font-semibold">P</span>
-                </div>
-                <div>
-                  <p className="font-semibold text-gray-900">Pierre D.</p>
-                  <p className="text-sm text-gray-600">Vente maison Saint Rambert</p>
+                <p className="text-gray-700 mb-4 italic">
+                  &ldquo;{avis.commentaire}&rdquo;
+                </p>
+                <div className="flex items-center">
+                  <div className={`w-10 h-10 bg-${avis.couleur}-100 rounded-full flex items-center justify-center mr-3`}>
+                    <span className={`text-${avis.couleur}-600 font-semibold`}>{avis.initiale}</span>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-gray-900">{avis.client}</p>
+                    <p className="text-sm text-gray-600">{avis.transaction}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-
-            {/* Avis 3 */}
-            <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100">
-              <div className="flex items-center mb-4">
-                <div className="flex text-yellow-400 text-lg">
-                  ★★★★★
-                </div>
-                <span className="ml-2 text-sm text-gray-600">5.0</span>
-              </div>
-              <p className="text-gray-700 mb-4 italic">
-                &ldquo;Un accompagnement personnalisé et professionnel. Gabrielle a su 
-                comprendre nos besoins et nous a guidés dans notre investissement 
-                immobilier à Lyon.&rdquo;
-              </p>
-              <div className="flex items-center">
-                <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mr-3">
-                  <span className="text-purple-600 font-semibold">S</span>
-                </div>
-                <div>
-                  <p className="font-semibold text-gray-900">Sophie M.</p>
-                  <p className="text-sm text-gray-600">Investissement Valmy</p>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
 
           <div className="text-center mt-12">
