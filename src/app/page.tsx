@@ -27,7 +27,7 @@ export default function Home() {
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
                 <a href="#accueil" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Accueil</a>
-                <a href="#agent" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">L'Agent</a>
+                <a href="#agent" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">L&apos;Agent</a>
                 <a href="#quartiers" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Quartiers</a>
                 <a href="#contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
               </div>
@@ -45,7 +45,7 @@ export default function Home() {
               Votre Expert Immobilier à Lyon
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-              Découvrez l'immobilier lyonnais avec une experte qui connaît chaque quartier 
+              Découvrez l&apos;immobilier lyonnais avec une experte qui connaît chaque quartier 
               et vous accompagne dans vos projets avec professionnalisme et écoute.
             </p>
             <button className="bg-white text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors duration-300 shadow-lg">
