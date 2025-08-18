@@ -156,7 +156,7 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Saint Rambert le Vergoin */}
+            {/* Plateau de Saint Rambert */}
             <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
               <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 relative">
                 <span className="text-blue-600 text-xl">🏘️</span>
@@ -164,7 +164,7 @@ export default function Home() {
                   <span className="text-gray-800 text-xs font-semibold">3 200€ - 5 800€/m²</span>
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Saint Rambert le Vergoin</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Plateau de Saint Rambert</h3>
               <p className="text-gray-600 mb-4">
                 Quartier résidentiel calme et familial au nord de Lyon. Maisons individuelles, 
                 appartements spacieux et espaces verts pour une qualité de vie exceptionnelle.
@@ -190,29 +190,26 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Vaise Industrie</h3>
               <p className="text-gray-600 mb-4">
-                Quartier en pleine transformation, anciennement industriel. Lofts modernes, 
-                appartements neufs et espaces de coworking dans un environnement dynamique.
+                Quartier en pleine transformation, anciennement industriel.
+                Appartements récents, bureaux espaces de coworking dans un environnement dynamique.
               </p>
               <div className="text-sm text-gray-500">
-                <p>• Prix au m² : 3 500€ - 6 200€</p>
-                <p>• Type : Lofts et appartements neufs</p>
+                <p>• Type : appartements</p>
                 <p>• Atout : Modernité et dynamisme</p>
               </div>
             </div>
 
-            {/* Plateau de Saint Rambert */}
+            {/* Saint Rambert le Vergoin */}
             <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
               <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
                 <span className="text-purple-600 text-xl">⛰️</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Plateau de Saint Rambert</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Saint Rambert le Vergoin</h3>
               <p className="text-gray-600 mb-4">
-                Quartier sur les hauteurs avec vue panoramique sur Lyon. Villas de standing, 
-                appartements haut de gamme et ambiance exclusive dans un cadre privilégié.
-              </p>
+                A la pointe nord de la commune de Lyon, limitrophe des communes et Saint Cyr au Mont d&apos;or et Collonge au mont d&apos;Or, le vergoin est un quartier vivant en pleine mutation.</p>
               <div className="text-sm text-gray-500">
                 <p>• Prix au m² : 4 800€ - 8 500€</p>
-                <p>• Type : Villas et appartements luxueux</p>
+                <p>• Type : appartements pour résidence principale ou investissement</p>
                 <p>• Atout : Vue panoramique</p>
               </div>
             </div>
