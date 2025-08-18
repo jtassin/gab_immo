@@ -425,6 +425,7 @@ export default function Home() {
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
             <p>&copy; 2025 Gabrielle Nicolini Immobilier. Tous droits réservés.</p>
+            <p className="mt-2 text-sm">RSAC : 800 433 500 - EI</p>
           </div>
         </div>
       </footer>
