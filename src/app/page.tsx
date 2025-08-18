@@ -53,7 +53,16 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section id="accueil" className="relative text-white" style={{ backgroundColor: 'rgb(31, 43, 82)' }}>
+      <section id="accueil" className="relative text-white">
+        <div className="absolute inset-0">
+          <Image
+            src="/header.jpg"
+            alt="Lyon - Ville d'opportunités immobilières"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
         <div className="absolute inset-0 bg-black opacity-40"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
