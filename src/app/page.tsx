@@ -13,7 +13,7 @@ export default function Home() {
       debug: process.env.NODE_ENV === "development",
       track_pageview: true,
       persistence: "localStorage",
-    
+      autocapture:true
     });
   }, []);
   
