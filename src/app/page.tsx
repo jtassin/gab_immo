@@ -1,6 +1,11 @@
 import Image from "next/image";
 
 export default function Home() {
+  // Calcul dynamique des années d'expérience depuis 2021
+  const startYear = 2021;
+  const currentYear = new Date().getFullYear();
+  const yearsOfExperience = currentYear - startYear;
+
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
@@ -57,30 +62,46 @@ export default function Home() {
             <div className="space-y-6">
               <h3 className="text-2xl font-bold text-gray-900">Gabrielle Nicolini</h3>
               <p className="text-lg text-gray-700 leading-relaxed">
-                Avec plus de 8 ans d'expérience dans l'immobilier lyonnais, je vous accompagne 
+                Avec {yearsOfExperience} ans d&apos;expérience dans l&apos;immobilier lyonnais, je vous accompagne 
                 dans tous vos projets : achat, vente, location et estimation de biens.
               </p>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                  <span className="text-gray-700">Expertise locale approfondie</span>
+                              <div className="space-y-4">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                    <span className="text-gray-700">Expertise locale approfondie</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                    <span className="text-gray-700">Accompagnement personnalisé</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                    <span className="text-gray-700">Transparence et écoute</span>
+                  </div>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                  <span className="text-gray-700">Accompagnement personnalisé</span>
+
+                {/* Statistiques dynamiques */}
+                <div className="grid grid-cols-2 gap-4 pt-4">
+                  <div className="text-center p-4 bg-blue-50 rounded-lg">
+                    <div className="text-2xl font-bold text-blue-600">{yearsOfExperience}+</div>
+                    <div className="text-sm text-gray-600">Années d&apos;expérience</div>
+                  </div>
+                  <div className="text-center p-4 bg-blue-50 rounded-lg">
+                    <div className="text-2xl font-bold text-blue-600">150+</div>
+                    <div className="text-sm text-gray-600">Transactions réussies</div>
+                  </div>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                  <span className="text-gray-700">Transparence et écoute</span>
-                </div>
-              </div>
             </div>
             
             <div className="bg-gray-200 rounded-lg p-8 text-center">
-              <div className="w-48 h-48 bg-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <span className="text-gray-500 text-lg">Photo de l'agent</span>
+              <div className="w-48 h-48 rounded-full mx-auto mb-4 overflow-hidden">
+                <img 
+                  src="https://media.licdn.com/dms/image/v2/C4E03AQEH8slXak4ExQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1623355540760?e=1758153600&v=beta&t=lsQm4o1WOzj_aO2trSohaI3xI3PbM_Hyw2mabmVDrjs"
+                  alt="Gabrielle Nicolini - Agent Immobilier"
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <p className="text-sm text-gray-500">Photo professionnelle à ajouter</p>
+              <p className="text-sm text-gray-500">Gabrielle Nicolini</p>
             </div>
           </div>
         </div>
