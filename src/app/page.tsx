@@ -48,14 +48,9 @@ export default function Home() {
               Découvrez l&apos;immobilier lyonnais avec une experte qui connaît chaque quartier 
               et vous accompagne dans vos projets avec professionnalisme et écoute.
             </p>
-            <button className="bg-white text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors duration-300 shadow-lg mb-8">
+            <button className="bg-white text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors duration-300 shadow-lg">
               Estimation Gratuite
             </button>
-            <div className="text-white text-lg">
-              <p className="mb-2">📞 06 19 18 74 33</p>
-              <p className="mb-2">✉️ gabrielle.nicolini@cesaretbrutus.com</p>
-              <p>📍 69009 Lyon</p>
-            </div>
           </div>
         </div>
       </section>
@@ -234,8 +229,16 @@ export default function Home() {
 
             {/* Vaise */}
             <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-              <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-orange-600 text-xl">🏙️</span>
+              <div className="w-full h-48 rounded-lg mb-4 overflow-hidden relative">
+                <img
+                  src="/vaise.jpg"
+                  alt="Vaise - Quartier mixte avec commerces et transports"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-40"></div>
+                <div className="absolute bottom-3 right-3 bg-white bg-opacity-95 rounded-lg px-3 py-2 shadow-lg">
+                  <span className="text-gray-800 text-sm font-bold">3 800€ - 6 500€/m²</span>
+                </div>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Vaise</h3>
               <p className="text-gray-600 mb-4">
@@ -243,7 +246,6 @@ export default function Home() {
                 maisons de ville et excellentes liaisons vers le centre de Lyon.
               </p>
               <div className="text-sm text-gray-500">
-                <p>• Prix au m² : 3 800€ - 6 500€</p>
                 <p>• Type : Appartements et maisons</p>
                 <p>• Atout : Transport et commerces</p>
               </div>
@@ -323,7 +325,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900">Téléphone</h3>
-                  <p className="text-gray-600">04 78 XX XX XX</p>
+                  <p className="text-gray-600">06 19 18 74 33</p>
                 </div>
               </div>
 
@@ -333,17 +335,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900">Email</h3>
-                  <p className="text-gray-600">gabrielle@gab-immo.fr</p>
-                </div>
-              </div>
-
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                  <span className="text-blue-600 text-xl">📍</span>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900">Bureau</h3>
-                  <p className="text-gray-600">123 Rue de la République<br />69002 Lyon</p>
+                  <p className="text-gray-600">gabrielle.nicolini@cesaretbrutus.com</p>
                 </div>
               </div>
 
