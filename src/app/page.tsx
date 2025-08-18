@@ -55,7 +55,7 @@ export default function Home() {
             </p>
             <button 
               onClick={() => setIsModalOpen(true)}
-              className="bg-white text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors duration-300 shadow-lg"
+              className="bg-white text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors duration-300 shadow-lg cursor-pointer"
             >
               Estimation Gratuite
             </button>
@@ -356,7 +356,7 @@ export default function Home() {
               </p>
               <button 
                 onClick={() => setIsModalOpen(true)}
-                className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300"
+                className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300 cursor-pointer"
               >
                 Réserver un créneau
               </button>
