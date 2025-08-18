@@ -175,8 +175,12 @@ export default function Home() {
 
             {/* Vaise Industrie */}
             <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-green-600 text-xl">🏭</span>
+              <div className="w-full h-32 rounded-lg mb-4 overflow-hidden">
+                <img 
+                  src="https://mairie9.lyon.fr/sites/mairie9/files/styles/img__700x394__crop_main/public/content/2017-09/Industrie.jpg?itok=UiX92Fq-"
+                  alt="Vaise Industrie - Quartier en transformation"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Vaise Industrie</h3>
               <p className="text-gray-600 mb-4">
