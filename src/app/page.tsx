@@ -209,7 +209,7 @@ export default function Home() {
                 A la pointe nord de la commune de Lyon, limitrophe des communes et Saint Cyr au Mont d&apos;or et Collonge au mont d&apos;Or, le vergoin est un quartier vivant en pleine mutation.</p>
               <div className="text-sm text-gray-500">
                 <p>• Prix au m² : 4 800€ - 8 500€</p>
-                <p>• Type : appartements pour résidence principale ou investissement</p>
+                <p>• Type : Maisons et appartements</p>
                 <p>• Atout : Vue panoramique</p>
               </div>
             </div>
