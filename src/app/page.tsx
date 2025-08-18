@@ -158,8 +158,11 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Saint Rambert le Vergoin */}
             <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 relative">
                 <span className="text-blue-600 text-xl">🏘️</span>
+                <div className="absolute -top-1 -right-1 bg-white bg-opacity-90 rounded-lg px-2 py-1">
+                  <span className="text-gray-800 text-xs font-semibold">3 200€ - 5 800€/m²</span>
+                </div>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Saint Rambert le Vergoin</h3>
               <p className="text-gray-600 mb-4">
@@ -167,7 +170,6 @@ export default function Home() {
                 appartements spacieux et espaces verts pour une qualité de vie exceptionnelle.
               </p>
               <div className="text-sm text-gray-500">
-                <p>• Prix au m² : 3 200€ - 5 800€</p>
                 <p>• Type : Maisons et appartements</p>
                 <p>• Atout : Calme et verdure</p>
               </div>
@@ -175,12 +177,15 @@ export default function Home() {
 
             {/* Vaise Industrie */}
             <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-              <div className="w-full h-32 rounded-lg mb-4 overflow-hidden">
+              <div className="w-full h-32 rounded-lg mb-4 overflow-hidden relative">
                 <img 
                   src="https://mairie9.lyon.fr/sites/mairie9/files/styles/img__700x394__crop_main/public/content/2017-09/Industrie.jpg?itok=UiX92Fq-"
                   alt="Vaise Industrie - Quartier en transformation"
                   className="w-full h-full object-cover"
                 />
+                <div className="absolute bottom-2 right-2 bg-white bg-opacity-90 rounded-lg px-3 py-1">
+                  <span className="text-gray-800 text-sm font-semibold">3 500€ - 6 200€/m²</span>
+                </div>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Vaise Industrie</h3>
               <p className="text-gray-600 mb-4">
