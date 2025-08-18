@@ -205,8 +205,9 @@ export default function Home() {
                 <span className="text-purple-600 text-xl">⛰️</span>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Saint Rambert le Vergoin</h3>
-              <p className="text-gray-600 mb-4">
-                A la pointe nord de la commune de Lyon, limitrophe des communes et Saint Cyr au Mont d&apos;or et Collonge au mont d&apos;Or, le vergoin est un quartier vivant en pleine mutation.</p>
+                              <p className="text-gray-600 mb-4">
+                  A la pointe nord de la commune de Lyon, limitrophe des communes de Saint Cyr au Mont d&apos;Or et de Collonge au Mont d&apos;Or, le Vergoin est un quartier vivant en pleine mutation.
+                </p>
               <div className="text-sm text-gray-500">
                 <p>• Prix au m² : 4 800€ - 8 500€</p>
                 <p>• Type : Maisons et appartements</p>
