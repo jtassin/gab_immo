@@ -1,10 +1,19 @@
 import Image from "next/image";
 
 export default function Home() {
-  // Calcul dynamique des années d'expérience depuis 2021
+  // Calcul dynamique des années d'expérience depuis janvier 2021
   const startYear = 2021;
-  const currentYear = new Date().getFullYear();
+  const startMonth = 0; // Janvier = 0
+  const currentDate = new Date();
+  const currentYear = currentDate.getFullYear();
+  const currentMonth = currentDate.getMonth();
+  
+  // Calcul des mois d'activité depuis janvier 2021
+  const monthsOfActivity = (currentYear - startYear) * 12 + (currentMonth - startMonth);
   const yearsOfExperience = Math.ceil(currentYear - startYear) + 1;
+  
+  // Calcul des transactions (1.2 par mois d'activité)
+  const estimatedTransactions = Math.round(monthsOfActivity * 1.2);
 
   return (
     <div className="min-h-screen bg-white">
@@ -87,7 +96,7 @@ export default function Home() {
                     <div className="text-sm text-gray-600">Années d&apos;expérience</div>
                   </div>
                   <div className="text-center p-4 bg-blue-50 rounded-lg">
-                    <div className="text-2xl font-bold text-blue-600">150+</div>
+                    <div className="text-2xl font-bold text-blue-600">{estimatedTransactions}+</div>
                     <div className="text-sm text-gray-600">Transactions réussies</div>
                   </div>
                 </div>
