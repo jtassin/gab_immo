@@ -23,7 +23,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section id="accueil" className="relative bg-gradient-to-r from-blue-900 to-blue-700 text-white">
+      <section id="accueil" className="relative text-white" style={{ backgroundColor: 'rgb(31, 43, 82)' }}>
         <div className="absolute inset-0 bg-black opacity-40"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
@@ -34,7 +34,7 @@ export default function Home() {
               Découvrez l'immobilier lyonnais avec une experte qui connaît chaque quartier 
               et vous accompagne dans vos projets avec professionnalisme et écoute.
             </p>
-            <button className="bg-white text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors duration-300 shadow-lg">
+            <button className="bg-white text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors duration-300 shadow-lg">
               Estimation Gratuite
             </button>
           </div>
@@ -99,105 +99,122 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Presqu'île */}
+            {/* Saint Rambert le Vergoin */}
             <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
               <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-blue-600 text-xl">🏛️</span>
+                <span className="text-blue-600 text-xl">🏘️</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Presqu'île</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Saint Rambert le Vergoin</h3>
               <p className="text-gray-600 mb-4">
-                Le cœur historique de Lyon, entre Saône et Rhône. Appartements de standing, 
-                commerces de luxe et vie culturelle intense.
+                Quartier résidentiel calme et familial au nord de Lyon. Maisons individuelles, 
+                appartements spacieux et espaces verts pour une qualité de vie exceptionnelle.
               </p>
               <div className="text-sm text-gray-500">
-                <p>• Prix au m² : 4 500€ - 8 000€</p>
-                <p>• Type : Appartements haussmanniens</p>
-                <p>• Atout : Patrimoine UNESCO</p>
+                <p>• Prix au m² : 3 200€ - 5 800€</p>
+                <p>• Type : Maisons et appartements</p>
+                <p>• Atout : Calme et verdure</p>
               </div>
             </div>
 
-            {/* Croix-Rousse */}
+            {/* Vaise Industrie */}
             <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
               <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-green-600 text-xl">🎨</span>
+                <span className="text-green-600 text-xl">🏭</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Croix-Rousse</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Vaise Industrie</h3>
               <p className="text-gray-600 mb-4">
-                Quartier bohème et créatif, célèbre pour ses traboules et son ambiance village. 
-                Appartements avec caractère et terrasses.
+                Quartier en pleine transformation, anciennement industriel. Lofts modernes, 
+                appartements neufs et espaces de coworking dans un environnement dynamique.
               </p>
               <div className="text-sm text-gray-500">
-                <p>• Prix au m² : 3 800€ - 6 500€</p>
-                <p>• Type : Lofts, ateliers</p>
+                <p>• Prix au m² : 3 500€ - 6 200€</p>
+                <p>• Type : Lofts et appartements neufs</p>
+                <p>• Atout : Modernité et dynamisme</p>
+              </div>
+            </div>
+
+            {/* Plateau de Saint Rambert */}
+            <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                <span className="text-purple-600 text-xl">⛰️</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Plateau de Saint Rambert</h3>
+              <p className="text-gray-600 mb-4">
+                Quartier sur les hauteurs avec vue panoramique sur Lyon. Villas de standing, 
+                appartements haut de gamme et ambiance exclusive dans un cadre privilégié.
+              </p>
+              <div className="text-sm text-gray-500">
+                <p>• Prix au m² : 4 800€ - 8 500€</p>
+                <p>• Type : Villas et appartements luxueux</p>
                 <p>• Atout : Vue panoramique</p>
               </div>
             </div>
 
-            {/* Vieux Lyon */}
-            <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-purple-600 text-xl">🏰</span>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Vieux Lyon</h3>
-              <p className="text-gray-600 mb-4">
-                Le plus ancien quartier de Lyon, classé UNESCO. Maisons à colombages, 
-                cours intérieures et ruelles médiévales authentiques.
-              </p>
-              <div className="text-sm text-gray-500">
-                <p>• Prix au m² : 4 200€ - 7 500€</p>
-                <p>• Type : Maisons historiques</p>
-                <p>• Atout : Authenticité médiévale</p>
-              </div>
-            </div>
-
-            {/* Part-Dieu */}
+            {/* Vaise */}
             <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
               <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-orange-600 text-xl">🏢</span>
+                <span className="text-orange-600 text-xl">🏙️</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Part-Dieu</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Vaise</h3>
               <p className="text-gray-600 mb-4">
-                Quartier d'affaires moderne avec la Tour Incity. Appartements contemporains, 
-                services de proximité et excellentes liaisons de transport.
+                Quartier mixte avec commerces, transports et logements. Appartements modernes, 
+                maisons de ville et excellentes liaisons vers le centre de Lyon.
               </p>
               <div className="text-sm text-gray-500">
-                <p>• Prix au m² : 3 500€ - 6 000€</p>
-                <p>• Type : Résidences modernes</p>
+                <p>• Prix au m² : 3 800€ - 6 500€</p>
+                <p>• Type : Appartements et maisons</p>
                 <p>• Atout : Transport et commerces</p>
               </div>
             </div>
 
-            {/* Confluence */}
+            {/* Valmy */}
             <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
               <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-teal-600 text-xl">🌊</span>
+                <span className="text-teal-600 text-xl">🌿</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Confluence</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Valmy</h3>
               <p className="text-gray-600 mb-4">
-                Quartier ultra-moderne en pleine transformation. Architecture contemporaine, 
-                espaces verts et logements écologiques de dernière génération.
+                Quartier résidentiel paisible avec espaces verts. Maisons individuelles, 
+                appartements familiaux et ambiance conviviale pour tous les âges.
               </p>
               <div className="text-sm text-gray-500">
-                <p>• Prix au m² : 4 000€ - 7 200€</p>
-                <p>• Type : Logements neufs</p>
-                <p>• Atout : Innovation écologique</p>
+                <p>• Prix au m² : 3 400€ - 5 900€</p>
+                <p>• Type : Maisons et appartements</p>
+                <p>• Atout : Espaces verts</p>
               </div>
             </div>
 
-            {/* Brotteaux */}
+            {/* Gorge de Loup */}
             <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
               <div className="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-pink-600 text-xl">🌳</span>
+                <span className="text-pink-600 text-xl">🌄</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Brotteaux</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Gorge de Loup</h3>
               <p className="text-gray-600 mb-4">
-                Quartier résidentiel huppé avec le Parc de la Tête d'Or. Appartements bourgeois, 
-                maisons de maître et ambiance familiale privilégiée.
+                Quartier sur les hauteurs avec vue imprenable. Appartements avec terrasses, 
+                maisons de caractère et accès facile aux transports en commun.
               </p>
               <div className="text-sm text-gray-500">
-                <p>• Prix au m² : 5 000€ - 9 000€</p>
-                <p>• Type : Résidences bourgeoises</p>
-                <p>• Atout : Parc et écoles</p>
+                <p>• Prix au m² : 4 200€ - 7 800€</p>
+                <p>• Type : Appartements et maisons</p>
+                <p>• Atout : Vue et altitude</p>
+              </div>
+            </div>
+
+            {/* Champvert */}
+            <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+              <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+                <span className="text-indigo-600 text-xl">🏡</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Champvert</h3>
+              <p className="text-gray-600 mb-4">
+                Quartier résidentiel calme et familial. Maisons avec jardins, appartements spacieux 
+                et écoles de proximité pour une vie de famille idéale.
+              </p>
+              <div className="text-sm text-gray-500">
+                <p>• Prix au m² : 3 600€ - 6 800€</p>
+                <p>• Type : Maisons et appartements</p>
+                <p>• Atout : Famille et proximité</p>
               </div>
             </div>
           </div>
