@@ -174,7 +174,7 @@ export default function Home() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-40"></div>
                   <div className="absolute bottom-3 right-3 bg-white bg-opacity-95 rounded-lg px-3 py-2 shadow-lg">
-                    <span className="text-gray-800 text-sm font-bold">??</span>
+                    <span className="text-gray-800 text-sm font-bold">2 564€ - 5 454€/m²</span>
                   </div>
                 </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Plateau de Saint Rambert</h3>
@@ -254,7 +254,7 @@ export default function Home() {
                 maisons de ville et excellentes liaisons vers le centre de Lyon.
               </p>
               <div className="text-sm text-gray-500">
-                <p>• Type : Appartements et maisons</p>
+                <p>• Type : Appartements</p>
                 <p>• Atouts : Transport et commerces</p>
               </div>
             </div>
@@ -269,7 +269,7 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-40"></div>
                 <div className="absolute bottom-3 right-3 bg-white bg-opacity-95 rounded-lg px-3 py-2 shadow-lg">
-                  <span className="text-gray-800 text-sm font-bold">3 400€ - 5 900€/m²</span>
+                  <span className="text-gray-800 text-sm font-bold">??</span>
                 </div>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Valmy</h3>
