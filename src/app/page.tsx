@@ -156,17 +156,13 @@ export default function Home() {
           
                     <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h3 className="text-2xl font-bold text-gray-700 mb-4 text-center italic" style={{ fontFamily: 'var(--font-crimson-text)', fontStyle: 'italic' }}>
-                Gabrielle Nicolini
-              </h3>
-              
               <div className="text-center">
-                <div className="w-64 h-76 mx-auto overflow-hidden">
+                <div className="w-80 h-96 mx-auto overflow-hidden">
                   <Image 
                     src="/Gabrielle_veste_BD-removebg-preview.png"
                     alt="Gabrielle Nicolini - Agent Immobilier"
-                    width={256}
-                    height={304}
+                    width={320}
+                    height={384}
                     className="w-full h-full object-cover object-top"
                   />
                 </div>
