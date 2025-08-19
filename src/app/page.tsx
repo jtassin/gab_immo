@@ -69,6 +69,7 @@ export default function Home() {
                 <a href="#accueil" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Accueil</a>
                 <a href="#agent" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Qui suis-je ?</a>
                 <a href="#chiffres" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Chiffres</a>
+                {/* Lien vers la section des quartiers - présente l'expertise géographique sur Lyon */}
                 <a href="#quartiers" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Quartiers</a>
                 <a href="#avis" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Avis</a>
                 <a href="#contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
@@ -96,6 +97,7 @@ export default function Home() {
                 <a href="#accueil" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md" onClick={() => setIsMobileMenuOpen(false)}>Accueil</a>
                 <a href="#agent" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md" onClick={() => setIsMobileMenuOpen(false)}>Qui suis-je ?</a>
                 <a href="#chiffres" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md" onClick={() => setIsMobileMenuOpen(false)}>Chiffres</a>
+                {/* Lien vers la section des quartiers - présente l'expertise géographique sur Lyon */}
                 <a href="#quartiers" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md" onClick={() => setIsMobileMenuOpen(false)}>Quartiers</a>
                 <a href="#avis" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md" onClick={() => setIsMobileMenuOpen(false)}>Avis</a>
                 <a href="#contact" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md" onClick={() => setIsMobileMenuOpen(false)}>Contact</a>
@@ -277,7 +279,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section Quartiers */}
+      {/* Section Quartiers - Présente l'expertise géographique sur Lyon */}
+      {/* Note : Cette section a l'ID "quartiers" mais le titre "Mon Expertise sur Lyon" */}
+      {/* car elle présente les quartiers où Gabrielle intervient avec son expertise locale */}
       <section id="quartiers" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
