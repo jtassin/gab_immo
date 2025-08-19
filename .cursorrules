@@ -1,0 +1,186 @@
+# Cursor Rules - Site Immobilier Gabrielle Nicolini
+
+## 🏠 CONTEXTE ET OBJECTIF
+- Site web pour Gabrielle Nicolini, agent immobilier à Lyon 9ème
+- Spécialisation : quartiers Vaise, Valmy, Saint Rambert, Champvert, Gorge de Loup, Vaise Industrie
+- Agence : César et Brutus
+- Langue : Français uniquement
+
+## 🏗️ ARCHITECTURE ET STRUCTURE
+
+### Navigation
+- **Ordre des sections** : Accueil → Qui suis-je → Chiffres → Quartiers → Avis → Contact
+- **Section "Quartiers"** : ID="quartiers" mais titre="Mon Expertise sur Lyon" (cohérent, pas d'incohérence)
+- **Menu mobile** : Hamburger responsive avec fermeture automatique après clic
+
+### Sections principales
+- **Hero** : Titre "Votre Spécialiste Immobilier à Lyon 9ème"
+- **Agent** : Photo à gauche, texte à droite, photo agrandie (w-80 h-96)
+- **Chiffres** : Image de fond avec overlay bg-black/30, cartes bg-white/95
+- **Quartiers** : 6 cartes avec images, prix sur images, format "X - Y €/m²"
+- **Avis** : 3 avis aléatoires depuis public/avis.json
+- **Contact** : Informations + bouton modal, horaires 9h-19h (Lun-Ven), 9h-13h (Sam)
+
+## 🎨 DESIGN ET STYLING
+
+### Couleurs
+- **Principal** : rgb(31, 43, 82) - bleu agence
+- **Navigation** : hover:text-blue-600
+- **Boutons CTA** : bg-blue-600
+- **Cartes chiffres** : Couleurs variées (bleu, vert, violet, orange) - MAINTENUES
+- **Alternance fonds** : bg-gray-50 et bg-white
+
+### Typographie
+- **Titres sections** : text-4xl md:text-5xl
+- **Espacement titres** : mb-6
+- **Police signature** : Crimson Text italic pour "Je vous accompagne de A à Z"
+- **Police normale** : Geist Sans
+
+### Espacement
+- **Sections principales** : py-24
+- **Sections secondaires** : py-20
+- **Cartes** : p-6
+- **Gap grid** : gap-8 (quartiers), gap-6 (chiffres)
+
+## 🖼️ IMAGES ET ASSETS
+
+### Images quartiers
+- **Hauteur** : h-48 (augmentée pour montrer les bâtiments)
+- **Prix** : Position bottom-3 right-3 sur images
+- **Format prix** : "X - Y €/m²" (ex: "2 564 - 5 454 €/m²")
+- **Images** : vergoin.jpg, plateau-saint-rambert.jpg, vaise.jpg, valmy.webp, champvert.jpg, vaise-industrie.jpg
+
+### Photo Gabrielle
+- **Source** : /Gabrielle_veste_BD-removebg-preview.png
+- **Dimensions** : w-80 h-96
+- **Style** : object-cover object-top (cache le logo, garde la tête)
+- **Position** : Gauche dans la section agent
+
+### Image de fond
+- **Section chiffres** : /interior-living-room.jpg
+- **Hero** : /header.jpg
+
+## 🔗 LIENS ET RÉSEAUX SOCIAUX
+
+### Navigation interne
+- **Ancres** : #accueil, #agent, #chiffres, #quartiers, #avis, #contact
+- **Smooth scroll** : Implémenté
+
+### Réseaux sociaux (footer)
+- **LinkedIn** : https://www.linkedin.com/in/gabrielle-nicolini
+- **Facebook** : https://www.facebook.com/gabrielle.nicolini.kw/
+- **Icônes** : SVG officiels, couleurs hover appropriées
+
+## 📊 DONNÉES ET CONTENU
+
+### Quartiers et prix
+- **Saint Rambert le Vergoin** : 1 837 - 3 544 €/m²
+- **Plateau de Saint Rambert** : 2 564 - 5 454 €/m²
+- **Vaise** : 2 265 - 5 280 €/m²
+- **Valmy** : 2 079 - 5 788 €/m²
+- **Champvert** : 1 967 - 4 959 €/m²
+- **Vaise Industrie** : 3 024 - 5 447 €/m²
+
+### Statistiques dynamiques
+- **Expérience** : Depuis 2020 (calculé dynamiquement)
+- **Projets** : 1.2 par mois × 2, arrondi à la dizaine
+- **Performance** : 1 vente toutes les 5 visites, délai moyen 52 jours
+
+### Avis clients
+- **Source** : public/avis.json
+- **Affichage** : 3 avis aléatoires
+- **Gestion** : \n convertis en <br /> pour les sauts de ligne
+
+## 🚀 FONCTIONNALITÉS
+
+### Modal contact
+- **Déclencheurs** : Boutons "Estimation Gratuite" et "Réserver un créneau"
+- **Contenu** : Téléphone, email, horaires
+- **Fermeture** : Bouton × ou clic extérieur
+
+### Analytics
+- **Google Analytics** : G-BYEZFSGM8M (Next.js integration)
+- **Mixpanel** : c763b02ec15098b02c46034afde3a6b8
+- **Tracking** : CTA clicks, modal interactions, page views
+
+## 🔍 SEO ET META
+
+### Meta tags
+- **Title** : "Gabrielle Nicolini - Spécialiste Immobilier Lyon 9ème | César et Brutus"
+- **Description** : Optimisée sans numéro de téléphone direct
+- **Keywords** : immobilier Lyon, conseiller immobilier Lyon 9ème, quartiers spécifiques
+
+### Schema.org
+- **Type** : RealEstateAgent
+- **Localisation** : Lyon 9ème
+- **Services** : Estimation, vente, achat, conseil
+- **Quartiers** : Liste complète des zones d'intervention
+
+### Open Graph
+- **Image** : Photo de Gabrielle (320x384px)
+- **Type** : website
+- **Locale** : fr_FR
+
+## ⚠️ RÈGLES IMPORTANTES
+
+### Cohérences à maintenir
+- **Section Quartiers** : ID="quartiers" + titre="Mon Expertise sur Lyon" (cohérent, pas d'incohérence)
+- **Couleurs cartes chiffres** : Variées (bleu, vert, violet, orange) - NE PAS UNIFORMISER
+- **Espacement sections** : py-24 pour principales, py-20 pour secondaires
+- **Typographie titres** : text-4xl md:text-5xl avec mb-6
+
+### Éléments à ne pas modifier
+- **Ordre navigation** : Accueil → Qui suis-je → Chiffres → Quartiers → Avis → Contact
+- **Structure quartiers** : 6 cartes distinctes (pas de fusion)
+- **Photo Gabrielle** : Position gauche, dimensions w-80 h-96
+- **Prix sur images** : Format "X - Y €/m²" en bas à droite
+
+### Conventions de nommage
+- **Images** : kebab-case (ex: plateau-saint-rambert.jpg)
+- **IDs sections** : kebab-case (ex: #quartiers, #chiffres)
+- **Classes Tailwind** : Utiliser la syntaxe v4 (ex: bg-white/95, pas bg-opacity-95)
+
+## 💻 NOTES TECHNIQUES
+
+### Tailwind CSS v4
+- **Opacité** : bg-black/30 (pas bg-black bg-opacity-30)
+- **Transparence** : bg-white/95 (pas bg-white bg-opacity-95)
+
+### Next.js
+- **Images** : Composant Image avec priority pour hero
+- **Client** : "use client" directive pour interactivité
+- **Fonts** : Google Fonts (Geist, Dancing Script, Crimson Text)
+
+### Responsive
+- **Mobile** : Menu hamburger, grid adaptatif
+- **Desktop** : Navigation horizontale, grid multi-colonnes
+- **Breakpoints** : md: (768px), lg: (1024px)
+
+## 🔄 DERNIÈRES MODIFICATIONS
+
+### Optimisations SEO appliquées
+- Meta description sans numéro de téléphone direct
+- Schema.org RealEstateAgent complet
+- Open Graph avec photo de Gabrielle
+- Alt text optimisés pour les images
+
+### Corrections UX/UI appliquées
+- Espacement hiérarchisé (py-24 vs py-20)
+- Typographie des titres optimisée (text-4xl md:text-5xl)
+- Menu mobile responsive avec fermeture automatique
+- Logos SVG des réseaux sociaux dans le footer
+
+## 📝 COMMENTAIRES IMPORTANTS
+
+### Section Quartiers
+```tsx
+{/* Section Quartiers - Présente l'expertise géographique sur Lyon */}
+{/* Note : Cette section a l'ID "quartiers" mais le titre "Mon Expertise sur Lyon" */}
+{/* car elle présente les quartiers où Gabrielle intervient avec son expertise locale */}
+```
+
+### Navigation
+```tsx
+{/* Lien vers la section des quartiers - présente l'expertise géographique sur Lyon */}
+<a href="#quartiers">Quartiers</a>
+```
