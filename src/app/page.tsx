@@ -66,6 +66,7 @@ export default function Home() {
                   <a href="#accueil" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Accueil</a>
                   <a href="#agent" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Qui suis-je ?</a>
                   <a href="#quartiers" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Quartiers</a>
+                  <a href="#chiffres" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Chiffres</a>
                   <a href="#avis" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Avis</a>
                   <a href="#contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
                 </div>
@@ -196,7 +197,7 @@ export default function Home() {
       </section>
 
       {/* Section Quelques chiffres */}
-      <section className="py-20 relative overflow-hidden">
+      <section id="chiffres" className="py-20 relative overflow-hidden">
         {/* Image de fond */}
         <div className="absolute inset-0">
           <Image
