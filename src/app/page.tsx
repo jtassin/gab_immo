@@ -145,12 +145,12 @@ export default function Home() {
       </section>
 
       {/* Section Agent */}
-      <section id="agent" className="py-20 bg-gray-50">
+      <section id="agent" className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                      <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Qui suis-je ?
-              </h2>
+                                <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Qui suis-je ?
+            </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Une experte passionnée qui met son savoir-faire au service de vos projets immobiliers
             </p>
@@ -243,7 +243,7 @@ export default function Home() {
         {/* Contenu */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Quelques chiffres
             </h2>
             <p className="text-xl text-gray-200 max-w-2xl mx-auto">
@@ -282,10 +282,10 @@ export default function Home() {
       {/* Section Quartiers - Présente l'expertise géographique sur Lyon */}
       {/* Note : Cette section a l'ID "quartiers" mais le titre "Mon Expertise sur Lyon" */}
       {/* car elle présente les quartiers où Gabrielle intervient avec son expertise locale */}
-      <section id="quartiers" className="py-20 bg-white">
+      <section id="quartiers" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Mon Expertise sur Lyon
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -455,10 +455,10 @@ export default function Home() {
       </section>
 
       {/* Section Avis Google */}
-      <section id="avis" className="py-20 bg-gray-50">
+      <section id="avis" className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Avis de nos clients
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -535,10 +535,10 @@ export default function Home() {
       </section>
 
       {/* Section Contact */}
-      <section id="contact" className="py-20 bg-white">
+      <section id="contact" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Contactez-moi
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
