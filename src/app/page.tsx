@@ -544,7 +544,24 @@ export default function Home() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900">Horaires</h3>
-                  <p className="text-gray-600">Lun-Ven : 9h-18h<br />Sam : 9h-12h</p>
+                  <p className="text-gray-600">Lun-Ven : 9h-19h<br />Sam : 9h-13h</p>
+                </div>
+              </div>
+
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                  <span className="text-blue-600 text-xl">🔗</span>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-900">LinkedIn</h3>
+                  <a 
+                    href="https://www.linkedin.com/in/gabrielle-nicolini"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:text-blue-800 transition-colors duration-300 underline"
+                  >
+                    Mon profil professionnel
+                  </a>
                 </div>
               </div>
             </div>
