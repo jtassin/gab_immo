@@ -196,40 +196,55 @@ export default function Home() {
       </section>
 
       {/* Section Quelques chiffres */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 relative overflow-hidden">
+        {/* Image de fond */}
+        <div className="absolute inset-0">
+          <Image
+            src="/interior-living-room.jpg"
+            alt="Intérieur moderne et lumineux - Espace de vie contemporain"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+        
+        {/* Overlay sombre pour la lisibilité */}
+        <div className="absolute inset-0 bg-black/30"></div>
+        
+        {/* Contenu */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Quelques chiffres
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-200 max-w-2xl mx-auto">
               Mon expérience et mes réalisations en chiffres
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            <div className="text-center p-6 bg-blue-50 rounded-xl shadow-lg border border-blue-100">
+            <div className="text-center p-6 bg-white/95 rounded-xl shadow-xl border border-white">
               <div className="text-3xl font-bold text-blue-600 mb-2">{yearsOfExperience}+</div>
-              <div className="text-base text-gray-700 font-medium">Années d&apos;expérience</div>
-              <div className="text-sm text-gray-500 mt-2">Depuis 2021</div>
+              <div className="text-base text-gray-800 font-medium">Années d&apos;expérience</div>
+              <div className="text-sm text-gray-600 mt-2">Depuis 2021</div>
             </div>
             
-            <div className="text-center p-6 bg-green-50 rounded-xl shadow-lg border border-green-100">
+            <div className="text-center p-6 bg-white/95 rounded-xl shadow-xl border border-white">
               <div className="text-3xl font-bold text-green-600 mb-2">{estimatedProjects}+</div>
-              <div className="text-base text-gray-700 font-medium">Projets réalisés</div>
-              <div className="text-sm text-gray-500 mt-2">Accompagnement complet</div>
+              <div className="text-base text-gray-800 font-medium">Projets réalisés</div>
+              <div className="text-sm text-gray-600 mt-2">Accompagnement complet</div>
             </div>
 
-            <div className="text-center p-6 bg-purple-50 rounded-xl shadow-lg border border-purple-100">
+            <div className="text-center p-6 bg-white/95 rounded-xl shadow-xl border border-white">
               <div className="text-3xl font-bold text-purple-600 mb-2">5</div>
-              <div className="text-base text-gray-700 font-medium">1 vente toutes les 5 visites</div>
-              <div className="text-sm text-gray-500 mt-2">En moyenne en 2025</div>
+              <div className="text-base text-gray-800 font-medium">1 vente toutes les 5 visites</div>
+              <div className="text-sm text-gray-600 mt-2">En moyenne en 2025</div>
             </div>
 
-            <div className="text-center p-6 bg-orange-50 rounded-xl shadow-lg border border-orange-100">
+            <div className="text-center p-6 bg-white/95 rounded-xl shadow-xl border border-white">
               <div className="text-3xl font-bold text-orange-600 mb-2">52</div>
-              <div className="text-base text-gray-700 font-medium">Jours</div>
-              <div className="text-sm text-gray-500 mt-2">Mon délai moyen de vente en 2025</div>
+              <div className="text-base text-gray-800 font-medium">Jours</div>
+              <div className="text-sm text-gray-600 mt-2">Mon délai moyen de vente en 2025</div>
             </div>
           </div>
         </div>
