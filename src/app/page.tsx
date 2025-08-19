@@ -399,7 +399,12 @@ export default function Home() {
                   <span className="ml-2 text-sm text-gray-600">{avis.note}.0</span>
                 </div>
                 <p className="text-gray-700 mb-4 italic">
-                  &ldquo;{avis.commentaire}&rdquo;
+                  &ldquo;{avis.commentaire.split('\n').map((line, index) => (
+                    <span key={index}>
+                      {line}
+                      {index < avis.commentaire.split('\n').length - 1 && <br />}
+                    </span>
+                  ))}&rdquo;
                 </p>
                 <div className="flex items-center">
                   <div className={`w-10 h-10 rounded-full flex items-center justify-center mr-3 ${
