@@ -207,17 +207,29 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="text-center p-8 bg-blue-50 rounded-xl shadow-lg border border-blue-100">
-              <div className="text-4xl font-bold text-blue-600 mb-2">{yearsOfExperience}+</div>
-              <div className="text-lg text-gray-700 font-medium">Années d&apos;expérience</div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <div className="text-center p-6 bg-blue-50 rounded-xl shadow-lg border border-blue-100">
+              <div className="text-3xl font-bold text-blue-600 mb-2">{yearsOfExperience}+</div>
+              <div className="text-base text-gray-700 font-medium">Années d&apos;expérience</div>
               <div className="text-sm text-gray-500 mt-2">Depuis 2021</div>
             </div>
             
-            <div className="text-center p-8 bg-green-50 rounded-xl shadow-lg border border-green-100">
-              <div className="text-4xl font-bold text-green-600 mb-2">{estimatedProjects}+</div>
-              <div className="text-lg text-gray-700 font-medium">Projets réalisés</div>
+            <div className="text-center p-6 bg-green-50 rounded-xl shadow-lg border border-green-100">
+              <div className="text-3xl font-bold text-green-600 mb-2">{estimatedProjects}+</div>
+              <div className="text-base text-gray-700 font-medium">Projets réalisés</div>
               <div className="text-sm text-gray-500 mt-2">Accompagnement complet</div>
+            </div>
+
+            <div className="text-center p-6 bg-purple-50 rounded-xl shadow-lg border border-purple-100">
+              <div className="text-3xl font-bold text-purple-600 mb-2">5</div>
+              <div className="text-base text-gray-700 font-medium">1 vente toutes les 5 visites</div>
+              <div className="text-sm text-gray-500 mt-2">En moyenne en 2025</div>
+            </div>
+
+            <div className="text-center p-6 bg-orange-50 rounded-xl shadow-lg border border-orange-100">
+              <div className="text-3xl font-bold text-orange-600 mb-2">52</div>
+              <div className="text-base text-gray-700 font-medium">Jours</div>
+              <div className="text-sm text-gray-500 mt-2">Mon délai moyen de vente en 2025</div>
             </div>
           </div>
         </div>
