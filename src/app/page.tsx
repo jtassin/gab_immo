@@ -116,11 +116,8 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                       <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Je vous accompagne de A à Z
+                Qui suis-je ?
               </h2>
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                Gabrielle Nicolini
-              </h3>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Une experte passionnée qui met son savoir-faire au service de vos projets immobiliers
             </p>
@@ -199,6 +196,12 @@ export default function Home() {
               <p className="text-gray-700 text-base leading-relaxed">
                 Nous avons un objectif commun : réaliser votre projet en toute confiance et sérénité.
               </p>
+              
+              <div className="text-center mt-8 pt-8">
+                <h3 className="text-2xl font-bold text-gray-800 mb-2" style={{ fontFamily: 'var(--font-crimson-text)', fontStyle: 'italic' }}>
+                  Je vous accompagne de A à Z
+                </h3>
+              </div>
             </div>
           </div>
         </div>
