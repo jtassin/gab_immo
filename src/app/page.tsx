@@ -514,7 +514,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900">Horaires</h4>
-                  <p className="text-gray-600">Lun-Ven : 9h-18h<br />Sam : 9h-12h</p>
+                  <p className="text-gray-600">Lun-Ven : 9h-19h<br />Sam : 9h-13h</p>
                 </div>
               </div>
             </div>
