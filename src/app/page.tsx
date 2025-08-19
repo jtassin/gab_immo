@@ -65,8 +65,8 @@ export default function Home() {
                               <div className="ml-10 flex items-baseline space-x-4">
                   <a href="#accueil" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Accueil</a>
                   <a href="#agent" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Qui suis-je ?</a>
-                  <a href="#quartiers" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Quartiers</a>
                   <a href="#chiffres" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Chiffres</a>
+                  <a href="#quartiers" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Quartiers</a>
                   <a href="#avis" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Avis</a>
                   <a href="#contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
                 </div>
@@ -227,7 +227,7 @@ export default function Home() {
             <div className="text-center p-6 bg-white/95 rounded-xl shadow-xl border border-white">
               <div className="text-3xl font-bold text-blue-600 mb-2">{yearsOfExperience}+</div>
               <div className="text-base text-gray-800 font-medium">Années d&apos;expérience</div>
-              <div className="text-sm text-gray-600 mt-2">Depuis 2021</div>
+              <div className="text-sm text-gray-600 mt-2">Depuis 2020</div>
             </div>
             
             <div className="text-center p-6 bg-white/95 rounded-xl shadow-xl border border-white">
@@ -495,7 +495,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300"
             >
-              <span className="mr-2">Voir tous nos avis Google</span>
+              <span className="mr-2">Voir tous mes avis Google</span>
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
               </svg>
