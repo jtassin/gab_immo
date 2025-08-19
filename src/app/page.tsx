@@ -140,18 +140,6 @@ export default function Home() {
                   />
                 </div>
               </div>
-              
-              {/* Statistiques en dessous de la photo */}
-              <div className="grid grid-cols-2 gap-4">
-                <div className="text-center p-4 bg-blue-50 rounded-lg">
-                  <div className="text-2xl font-bold text-blue-600">{yearsOfExperience}+</div>
-                  <div className="text-sm text-gray-600">Années d&apos;expérience</div>
-                </div>
-                <div className="text-center p-4 bg-blue-50 rounded-lg">
-                  <div className="text-2xl font-bold text-blue-600">{estimatedProjects}+</div>
-                  <div className="text-sm text-gray-600">Projets réalisés</div>
-                </div>
-              </div>
             </div>
             
             <div className="space-y-6">
@@ -202,6 +190,34 @@ export default function Home() {
                   Je vous accompagne de A à Z
                 </h3>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section Quelques chiffres */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Quelques chiffres
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Mon expérience et mes réalisations en chiffres
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="text-center p-8 bg-blue-50 rounded-xl shadow-lg border border-blue-100">
+              <div className="text-4xl font-bold text-blue-600 mb-2">{yearsOfExperience}+</div>
+              <div className="text-lg text-gray-700 font-medium">Années d&apos;expérience</div>
+              <div className="text-sm text-gray-500 mt-2">Depuis 2021</div>
+            </div>
+            
+            <div className="text-center p-8 bg-green-50 rounded-xl shadow-lg border border-green-100">
+              <div className="text-4xl font-bold text-green-600 mb-2">{estimatedProjects}+</div>
+              <div className="text-lg text-gray-700 font-medium">Projets réalisés</div>
+              <div className="text-sm text-gray-500 mt-2">Accompagnement complet</div>
             </div>
           </div>
         </div>
