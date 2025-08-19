@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/third-parties": "^15.4.7",
     "@vercel/analytics": "^1.5.0",
     "mixpanel-browser": "^2.68.0",
     "next": "15.4.6",
