@@ -1,0 +1,95 @@
+{
+  "avis": [
+    {
+      "id": 1,
+      "note": 5,
+      "commentaire": "Super accompagnement dans la vente de mon appartement !\nMme Nicolini a toujours été disponible et en plus très sympathique !",
+      "client": "Nicolas L.",
+      "initiale": "NL",
+      "couleur": "green",
+      "transaction": "Vente appartement Vaise"
+    },
+    {
+      "id": 3,
+      "note": 5,
+      "commentaire": "Mme Nicolini est très professionnelle et nous a expliqué toutes les démarches. Nous lui avons fait confiance et notre appartement s'est vendue très rapidement et au prix, sans négociation! Merci encore",
+      "client": "Leslie M.",
+      "initiale": "LM",
+      "couleur": "pink",
+      "transaction": "Vente appartement Saint Rambert Vergoin"
+    },
+    {
+      "id": 4,
+      "note": 5,
+      "commentaire": "Je recommande +++ Gabrielle Nicolini qui nous a accompagnés dans notre projet de vente immobilière. Merci Gabrielle pour votre écoute, votre expertise et votre professionnalisme !!!",
+      "client": "Julie M.",
+      "initiale": "JM",
+      "couleur": "purple",
+      "transaction": "Vente appartement Saint Rambert"
+    },
+    {
+      "id": 9,
+      "note": 5,
+      "commentaire": "Nous sommes passés par Gabrielle pour la vente de notre appartement et nous sommes trés contents de l'avoir fait, Gabrielle est trés professionnelle, elle facilite toutes les démarches et nous a mis en relation avec des professionnels. L' appartement s'est vendu en quelques jours seulement. Je recommande Gabrielle les yeux fermés.",
+      "client": "Fatna D.",
+      "initiale": "FD",
+      "couleur": "brown",
+      "transaction": "Vente appartement Lyon 9"
+    },
+    {
+      "id": 5,
+      "note": 5,
+      "commentaire": "Nous avons été ravie des services de Gabrielle!!! Très sympathique et professionnelle, de très bons conseils même en agencement!!! Je conseillerai Gabrielle les yeux fermés!",
+      "client": "Donald C.",
+      "initiale": "DC",
+      "couleur": "red",
+      "transaction": "Achat appartement plateau de Saint Rambert"
+
+    },
+    {
+      "id": 10,
+      "note": 5,
+      "commentaire": "Sans hésitation, je recommande Gabrielle Nicolini. Dans le cadre de mon achat immobilier lyonnais, elle a été d'un grand professionnalisme du debut jusqu'à la fin et m'a beaucoup aidé dans certains démarches (recommandation d'un courtier, notaire...). Sans oublier, qu'elle est toujours de bons conseils 👍",
+      "client": "Elisa C.",
+      "initiale": "EC",
+      "couleur": "purple",
+      "transaction": "Achat appartement Lyon 9"
+    },
+    {
+      "id": 6,
+      "note": 5,
+      "commentaire": "Grâce à Gabrielle nous avons réussi à trouver la perle rare pour notre premier achat. Un professionnalisme et une réactivité à toute épreuve, mais surtout beaucoup de gentillesse et de bienveillance. Nous avons pris beaucoup de plaisir à travailler avec Gabrielle et je la recommande les yeux fermés !",
+      "client": "Sacha D.",
+      "initiale": "SD",
+      "couleur": "grey",
+      "transaction": "Achat appartement Lyon 9"
+    },
+    {
+      "id": 7,
+      "note": 5,
+      "commentaire": "Accompagnement efficace et guidé, à chaque étape. Gabrielle tient l’équilibre entre la satisfaction de ses clients, côté vente et côté achat. Ma notaire a également apprécié sa présence lors du compromis et de la vente, pratique qui se raréfie dans la profession.",
+      "client": "Fanny Q.",
+      "initiale": "FQ",
+      "couleur": "orange",
+      "transaction": "Achat appartement Champagne-au-Mont-d'Or et Vente maison Lissieu"
+    },
+    {
+      "id": 8,
+      "note": 5,
+      "commentaire": "Un grand merci à Gabrielle Nicolini pour la vente de notre appartement.\nElle a géré notre dossier avec beaucoup de professionnalisme, de rigueur, d’écoute et de disponibilité.\nElle a su nous orienter vers des professionnels compétents: diagnostiqueur immobilier et étude notariale.\nDynamique et très sympathique, Gabrielle a eu toute notre confiance et nous la recommandons à 100 %.",
+      "client": "Claire et Daniel",
+      "initiale": "CD",
+      "couleur": "orange",
+      "transaction": "Vente appartement Plateau de Saint Rambert"
+    },
+    {
+      "id": 11,
+      "note": 5,
+      "commentaire": "Nous étions en recherche active d'appartement et nous sommes tombés avec ma compagne sur un appartement qui nous a fait rencontrer Gabrielle. Pendant toute la durée de l'opération elle a été présente à chaque étape, a la moindre question la réponse de sa part ne se faisait pas attendre.\n\nNous étions tellement stressés et dans un monde qui nous paraissait si inaccessible et pourtant elle nous a rassuré à chaque fois, on à très rapidement compris que nous étions en de bonnes mains et si c'était a refaire ce serait un immense oui!\n\nSouriante, avenante et extrêmement positive, un bonheur d'avoir été accompagnée par elle tout au long du processus!",
+      "client": "MaBa",
+      "initiale": "MB",
+      "couleur": "grey",
+      "transaction": "Achat appartement Plateau de Saint Rambert"
+    }
+  ]
+}

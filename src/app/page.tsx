@@ -4,8 +4,19 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import mixpanel from "mixpanel-browser";
 
+interface Avis {
+  id: number;
+  note: number;
+  commentaire: string;
+  client: string;
+  transaction: string;
+  initiale: string;
+  couleur: string;
+}
+
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [avisAleatoires, setAvisAleatoires] = useState<Avis[]>([]);
   
   // Initialisation de Mixpanel
   useEffect(() => {
@@ -15,6 +26,16 @@ export default function Home() {
       persistence: "localStorage",
       autocapture:true
     });
+
+    // Charger et sélectionner 3 avis au hasard
+    fetch('/avis.json')
+      .then(response => response.json())
+      .then(data => {
+        const avis = data.avis;
+        const avisMelanges = [...avis].sort(() => Math.random() - 0.5);
+        setAvisAleatoires(avisMelanges.slice(0, 3));
+      })
+      .catch(error => console.error('Erreur lors du chargement des avis:', error));
   }, []);
   
   // Calcul dynamique des années d'expérience depuis janvier 2021
@@ -41,12 +62,13 @@ export default function Home() {
               <h1 className="text-2xl font-bold text-gray-900">Gabrielle Nicolini Immobilier</h1>
             </div>
             <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-4">
-                <a href="#accueil" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Accueil</a>
-                <a href="#agent" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Qui suis-je ?</a>
-                <a href="#quartiers" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Quartiers</a>
-                <a href="#contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
-              </div>
+                              <div className="ml-10 flex items-baseline space-x-4">
+                  <a href="#accueil" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Accueil</a>
+                  <a href="#agent" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Qui suis-je ?</a>
+                  <a href="#quartiers" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Quartiers</a>
+                  <a href="#avis" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Avis</a>
+                  <a href="#contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                </div>
             </div>
           </div>
         </div>
@@ -351,6 +373,86 @@ export default function Home() {
                 <p>• Atouts : Transport et prix accessible</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section Avis Google */}
+      <section id="avis" className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Avis de nos clients
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Découvrez ce que disent nos clients satisfaits sur Google
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {avisAleatoires.map((avis) => (
+              <div key={avis.id} className="bg-white rounded-lg shadow-lg p-6 border border-gray-100">
+                <div className="flex items-center mb-4">
+                  <div className="flex text-yellow-400 text-lg">
+                    {'★'.repeat(avis.note)}
+                  </div>
+                  <span className="ml-2 text-sm text-gray-600">{avis.note}.0</span>
+                </div>
+                <p className="text-gray-700 mb-4 italic">
+                  &ldquo;{avis.commentaire.split('\n').map((line, index) => (
+                    <span key={index}>
+                      {line}
+                      {index < avis.commentaire.split('\n').length - 1 && <br />}
+                    </span>
+                  ))}&rdquo;
+                </p>
+                <div className="flex items-center">
+                  <div className={`w-10 h-10 rounded-full flex items-center justify-center mr-3 ${
+                    avis.couleur === 'blue' ? 'bg-blue-100' :
+                    avis.couleur === 'green' ? 'bg-green-100' :
+                    avis.couleur === 'purple' ? 'bg-purple-100' :
+                    avis.couleur === 'indigo' ? 'bg-indigo-100' :
+                    avis.couleur === 'pink' ? 'bg-pink-100' :
+                    avis.couleur === 'orange' ? 'bg-orange-100' :
+                    avis.couleur === 'teal' ? 'bg-teal-100' :
+                    avis.couleur === 'red' ? 'bg-red-100' :
+                    'bg-gray-100'
+                  }`}>
+                    <span className={`font-semibold ${
+                      avis.couleur === 'blue' ? 'text-blue-600' :
+                      avis.couleur === 'green' ? 'text-green-600' :
+                      avis.couleur === 'purple' ? 'text-purple-600' :
+                      avis.couleur === 'indigo' ? 'text-indigo-600' :
+                      avis.couleur === 'pink' ? 'text-pink-600' :
+                      avis.couleur === 'orange' ? 'text-orange-600' :
+                      avis.couleur === 'teal' ? 'text-teal-600' :
+                      avis.couleur === 'red' ? 'text-red-600' :
+                      'text-gray-600'
+                    }`}>
+                      {avis.initiale}
+                    </span>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-gray-900">{avis.client}</p>
+                    <p className="text-sm text-gray-600">{avis.transaction}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <a 
+              href="https://www.google.com/search?sca_esv=0cad35c59d313fc9&sxsrf=AE3TifPi0_6nr3p25xZfjiYgXLggA6pBmA:1755554167296&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-EyM6GHPHcb_yi2l6tgzcRUFiCvLZpMzTQz1rzMYJhDSJR7X6AvjfnHDdYEdcNcje_T19tU8Vm41BLwzml6X4lSrh6F1ccExDhmJjY9EsmAIC2pw-gQ%3D%3D&q=Gabrielle+Nicolini+-+Immobilier+Avis&sa=X&ved=2ahUKEwiQipr0rJWPAxUTfqQEHeBGO8UQ0bkNegQIQRAE&biw=1100&bih=823&dpr=2" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300"
+            >
+              <span className="mr-2">Voir tous nos avis Google</span>
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+              </svg>
+            </a>
           </div>
         </div>
       </section>
