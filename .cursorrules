@@ -101,7 +101,13 @@
 ### Analytics
 - **Google Analytics** : G-BYEZFSGM8M (Next.js integration)
 - **Mixpanel** : c763b02ec15098b02c46034afde3a6b8
-- **Tracking** : CTA clicks, modal interactions, page views
+- **Tracking GA4** : 
+  - CTA clicks, modal interactions, page views
+  - Section scrolls, neighborhood interactions
+  - Social media clicks, review interactions
+  - Navigation interne
+- **Composants** : GA4Tracker, TrackedButton, TrackedLink
+- **Hook** : useGoogleAnalytics pour événements personnalisés
 
 ## 🔍 SEO ET META
 

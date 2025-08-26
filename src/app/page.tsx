@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import mixpanel from "mixpanel-browser";
+import { GA4Tracker, TrackedButton, TrackedLink, useNeighborhoodTracking } from "../components/GA4Tracker";
+import { useGoogleAnalytics } from "../hooks/useGoogleAnalytics";
 
 interface Avis {
   id: number;
@@ -18,6 +20,8 @@ export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [avisAleatoires, setAvisAleatoires] = useState<Avis[]>([]);
+  const { trackNeighborhoodView, trackNeighborhoodClick } = useNeighborhoodTracking();
+  const { trackSocialMedia, trackReview, trackModal } = useGoogleAnalytics();
   
   // Initialisation de Mixpanel
   useEffect(() => {
@@ -54,7 +58,8 @@ export default function Home() {
   const estimatedProjects = Math.round((monthsOfActivity * 1.2 * 2) / 10) * 10; // 1.2 projets par mois, multiplié par 2, arrondi à la dizaine
 
   return (
-    <div className="min-h-screen bg-white">
+    <GA4Tracker>
+      <div className="min-h-screen bg-white">
             {/* Navigation */}
       <nav className="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -66,13 +71,13 @@ export default function Home() {
             {/* Menu desktop */}
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
-                <a href="#accueil" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Accueil</a>
-                <a href="#agent" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Qui suis-je ?</a>
-                <a href="#chiffres" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Chiffres</a>
+                <TrackedLink href="#accueil" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Accueil</TrackedLink>
+                <TrackedLink href="#agent" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Qui suis-je ?</TrackedLink>
+                <TrackedLink href="#chiffres" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Chiffres</TrackedLink>
                 {/* Lien vers la section des quartiers - présente l'expertise géographique sur Lyon */}
-                <a href="#quartiers" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Quartiers</a>
-                <a href="#avis" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Avis</a>
-                <a href="#contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                <TrackedLink href="#quartiers" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Quartiers</TrackedLink>
+                <TrackedLink href="#avis" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Avis</TrackedLink>
+                <TrackedLink href="#contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Contact</TrackedLink>
               </div>
             </div>
 
@@ -94,13 +99,13 @@ export default function Home() {
           {isMobileMenuOpen && (
             <div className="md:hidden">
               <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
-                <a href="#accueil" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md" onClick={() => setIsMobileMenuOpen(false)}>Accueil</a>
-                <a href="#agent" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md" onClick={() => setIsMobileMenuOpen(false)}>Qui suis-je ?</a>
-                <a href="#chiffres" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md" onClick={() => setIsMobileMenuOpen(false)}>Chiffres</a>
+                <TrackedLink href="#accueil" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md" onClick={() => setIsMobileMenuOpen(false)}>Accueil</TrackedLink>
+                <TrackedLink href="#agent" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md" onClick={() => setIsMobileMenuOpen(false)}>Qui suis-je ?</TrackedLink>
+                <TrackedLink href="#chiffres" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md" onClick={() => setIsMobileMenuOpen(false)}>Chiffres</TrackedLink>
                 {/* Lien vers la section des quartiers - présente l'expertise géographique sur Lyon */}
-                <a href="#quartiers" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md" onClick={() => setIsMobileMenuOpen(false)}>Quartiers</a>
-                <a href="#avis" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md" onClick={() => setIsMobileMenuOpen(false)}>Avis</a>
-                <a href="#contact" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md" onClick={() => setIsMobileMenuOpen(false)}>Contact</a>
+                <TrackedLink href="#quartiers" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md" onClick={() => setIsMobileMenuOpen(false)}>Quartiers</TrackedLink>
+                <TrackedLink href="#avis" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md" onClick={() => setIsMobileMenuOpen(false)}>Avis</TrackedLink>
+                <TrackedLink href="#contact" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md" onClick={() => setIsMobileMenuOpen(false)}>Contact</TrackedLink>
               </div>
             </div>
           )}
@@ -128,18 +133,21 @@ export default function Home() {
               Découvrez l&apos;immobilier lyonnais avec une experte qui connaît chaque quartier 
               et vous accompagne dans vos projets avec professionnalisme et écoute.
             </p>
-            <button 
-              onClick={() => {
-                setIsModalOpen(true);
-                mixpanel.track("CTA Clicked", {
-                  button: "Estimation Gratuite",
-                  location: "Hero Section"
-                });
-              }}
-              className="bg-white text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors duration-300 shadow-lg cursor-pointer"
-            >
-              Estimation Gratuite
-            </button>
+                          <TrackedButton 
+                onClick={() => {
+                  setIsModalOpen(true);
+                  mixpanel.track("CTA Clicked", {
+                    button: "Estimation Gratuite",
+                    location: "Hero Section"
+                  });
+                  trackModal('contact', 'open');
+                }}
+                className="bg-white text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors duration-300 shadow-lg cursor-pointer"
+                ctaName="Estimation Gratuite"
+                location="Hero"
+              >
+                Estimation Gratuite
+              </TrackedButton>
           </div>
         </div>
       </section>
@@ -294,8 +302,11 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                          {/* Plateau de Saint Rambert */}
-              <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+                                      {/* Plateau de Saint Rambert */}
+            <div 
+              className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300"
+              onMouseEnter={() => trackNeighborhoodView('Plateau de Saint Rambert')}
+            >
                 <div className="w-full h-48 rounded-lg mb-4 overflow-hidden relative">
                                   <Image
                   src="/plateau-saint-rambert.jpg"
@@ -322,7 +333,10 @@ export default function Home() {
             </div>
 
             {/* Vaise Industrie */}
-            <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+            <div 
+              className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300"
+              onMouseEnter={() => trackNeighborhoodView('Vaise Industrie')}
+            >
               <div className="w-full h-48 rounded-lg mb-4 overflow-hidden relative">
                 <Image 
                   src="/vaise-industrie.jpg"
@@ -348,7 +362,10 @@ export default function Home() {
             </div>
 
                           {/* Saint Rambert le Vergoin */}
-              <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+              <div 
+                className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300"
+                onMouseEnter={() => trackNeighborhoodView('Saint Rambert le Vergoin')}
+              >
                 <div className="w-full h-48 rounded-lg mb-4 overflow-hidden relative">
                   <Image
                     src="/vergoin.jpg"
@@ -373,7 +390,10 @@ export default function Home() {
             </div>
 
             {/* Vaise */}
-            <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+            <div 
+              className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300"
+              onMouseEnter={() => trackNeighborhoodView('Vaise')}
+            >
               <div className="w-full h-48 rounded-lg mb-4 overflow-hidden relative">
                 <Image
                   src="/vaise.jpg"
@@ -399,7 +419,10 @@ export default function Home() {
             </div>
 
             {/* Valmy */}
-            <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+            <div 
+              className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300"
+              onMouseEnter={() => trackNeighborhoodView('Valmy')}
+            >
               <div className="w-full h-48 rounded-lg mb-4 overflow-hidden relative">
                 <Image
                   src="/valmy.webp"
@@ -425,7 +448,10 @@ export default function Home() {
             </div>
 
             {/* Champvert */}
-            <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+            <div 
+              className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300"
+              onMouseEnter={() => trackNeighborhoodView('Champvert')}
+            >
               <div className="w-full h-48 rounded-lg mb-4 overflow-hidden relative">
                 <Image
                   src="/champvert.jpg"
@@ -468,7 +494,11 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {avisAleatoires.map((avis) => (
-              <div key={avis.id} className="bg-white rounded-lg shadow-lg p-6 border border-gray-100">
+              <div 
+                key={avis.id} 
+                className="bg-white rounded-lg shadow-lg p-6 border border-gray-100"
+                onMouseEnter={() => trackReview('view', avis.id)}
+              >
                 <div className="flex items-center mb-4">
                   <div className="flex text-yellow-400 text-lg">
                     {'★'.repeat(avis.note)}
@@ -586,18 +616,21 @@ export default function Home() {
               <p className="text-gray-600 mb-6">
                 Planifiez une consultation gratuite pour discuter de votre projet immobilier.
               </p>
-              <button 
+              <TrackedButton 
                 onClick={() => {
                   setIsModalOpen(true);
                   mixpanel.track("CTA Clicked", {
                     button: "Réserver un créneau",
                     location: "Contact Section"
                   });
+                  trackModal('contact', 'open');
                 }}
                 className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300 cursor-pointer"
+                ctaName="Réserver un créneau"
+                location="Contact"
               >
                 Réserver un créneau
-              </button>
+              </TrackedButton>
             </div>
           </div>
         </div>
@@ -640,6 +673,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-blue-500 transition-colors duration-300"
                 aria-label="Profil LinkedIn de Gabrielle Nicolini"
+                onClick={() => trackSocialMedia('linkedin', 'click')}
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.047-1.032-3.047-1.032 0-1.26 1.317-1.26 3.031v5.585H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
@@ -651,6 +685,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-blue-600 transition-colors duration-300"
                 aria-label="Page Facebook de Gabrielle Nicolini"
+                onClick={() => trackSocialMedia('facebook', 'click')}
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
@@ -677,6 +712,7 @@ export default function Home() {
                     modal: "Contact",
                     duration: "N/A" // Vous pourriez calculer la durée d'ouverture
                   });
+                  trackModal('contact', 'close');
                 }}
                 className="text-gray-400 hover:text-gray-600 text-2xl font-bold"
               >
@@ -734,6 +770,7 @@ export default function Home() {
           </div>
         </div>
       )}
-    </div>
+      </div>
+    </GA4Tracker>
   );
 }
