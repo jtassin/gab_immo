@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 
 declare global {
   interface Window {
-    gtag: (...args: any[]) => void;
+    gtag: (...args: unknown[]) => void;
   }
 }
 
@@ -24,6 +24,7 @@ interface GAPageView {
 export const useGoogleAnalytics = () => {
   // Initialisation de GA4
   useEffect(() => {
+    //@ts-expect-error gtag might be undefined in server side
     if (typeof window !== 'undefined' && window.gtag) {
       // GA4 est déjà initialisé via @next/third-parties
       console.log('Google Analytics 4 initialisé');
