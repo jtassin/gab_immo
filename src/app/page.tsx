@@ -520,7 +520,7 @@ export default function Home() {
                 <p className="text-gray-700 text-lg leading-relaxed mb-8">
                   Je suis indépendante et je serai votre interlocutrice dédiée tout au long de votre projet, 
                   pour autant, vous bénéficierez de tous les services et outils ainsi que de l&apos;incroyable 
-                  force de frappe commerciale du groupe <a href="https://www.cesaretbrutus.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">César et Brutus</a> dont je fais partie :
+                  force de frappe commerciale du groupe <a href="https://www.cesaretbrutus.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline" onClick={() => trackSocialMedia('cesar-brutus-website', 'click')}>César et Brutus</a> dont je fais partie :
                 </p>
 
                 <div className="space-y-6">
