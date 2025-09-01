@@ -489,7 +489,7 @@ export default function Home() {
       </section>
 
       {/* Section L'agence César et Brutus */}
-      <section id="agence" className="py-24 bg-gray-50">
+      <section id="agence" className="py-24 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -500,83 +500,81 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-100">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              {/* Image de l'équipe */}
-              <div className="order-2 lg:order-1">
-                <div className="relative rounded-lg overflow-hidden">
-                  <Image
-                    src="/equipe-cesar-brutus.jpg"
-                    alt="Équipe César et Brutus Lyon - 120 conseillers immobiliers"
-                    width={600}
-                    height={400}
-                    className="w-full h-auto object-cover"
-                  />
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Image de l'équipe */}
+            <div className="order-2 lg:order-1">
+              <div className="relative rounded-lg overflow-hidden">
+                <Image
+                  src="/equipe-cesar-brutus.jpg"
+                  alt="Équipe César et Brutus Lyon - 120 conseillers immobiliers"
+                  width={600}
+                  height={400}
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Contenu texte */}
+            <div className="order-1 lg:order-2">
+              <p className="text-gray-700 text-lg leading-relaxed mb-8">
+                Je suis indépendante et je serai votre interlocutrice dédiée tout au long de votre projet, 
+                pour autant, vous bénéficierez de tous les services et outils ainsi que de l&apos;incroyable 
+                force de frappe commerciale du groupe <a href="https://www.cesaretbrutus.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline" onClick={() => trackSocialMedia('cesar-brutus-website', 'click')}>César et Brutus</a> dont je fais partie :
+              </p>
+
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <span className="font-bold text-2xl text-blue-600">•</span>
+                  <div>
+                    <p className="text-gray-800 font-semibold mb-2">
+                      <strong>120 conseillers immobiliers</strong> qui travaillent dans le partage
+                    </p>
+                    <p className="text-gray-600">
+                      = <strong>une base de données acquéreurs sans équivalent</strong>
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <span className="font-bold text-2xl text-blue-600">•</span>
+                  <div>
+                    <p className="text-gray-800 font-semibold mb-2">
+                      <strong>5 métiers supports</strong> : juridique / marketing / financier / administratif / conseil
+                    </p>
+                    <p className="text-gray-600">
+                      = <strong>une offre de services complète</strong> pour accompagner nos clients vendeurs et acquéreurs
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <span className="font-bold text-2xl text-blue-600">•</span>
+                  <div>
+                    <p className="text-gray-800 font-semibold mb-2">
+                      <strong>1000+ mandats</strong> de vente en stock, <strong>950+ projets actés</strong> en 2024, <strong>1,3 ventes/jour</strong> en moyenne
+                    </p>
+                    <p className="text-gray-600">
+                      = <strong>n°1 lyonnais</strong> en nombre de transactions
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              {/* Contenu texte */}
-              <div className="order-1 lg:order-2">
-                <p className="text-gray-700 text-lg leading-relaxed mb-8">
-                  Je suis indépendante et je serai votre interlocutrice dédiée tout au long de votre projet, 
-                  pour autant, vous bénéficierez de tous les services et outils ainsi que de l&apos;incroyable 
-                  force de frappe commerciale du groupe <a href="https://www.cesaretbrutus.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline" onClick={() => trackSocialMedia('cesar-brutus-website', 'click')}>César et Brutus</a> dont je fais partie :
+              <div className="mt-8 pt-6 border-t border-gray-200">
+                <p className="text-gray-700 mb-4">
+                  Et pour répondre à l&apos;ensemble de vos besoins en immobilier, César et Brutus, ce sont aussi des équipes qui vous accompagnent en :
                 </p>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Location et gestion locative</li>
+                  <li>• Syndic de copropriété</li>
+                  <li>• Courtage en financement et courtage en travaux</li>
+                </ul>
+              </div>
 
-                <div className="space-y-6">
-                  <div className="flex items-start space-x-4">
-                    <span className="font-bold text-2xl text-blue-600">•</span>
-                    <div>
-                      <p className="text-gray-800 font-semibold mb-2">
-                        <strong>120 conseillers immobiliers</strong> qui travaillent dans le partage
-                      </p>
-                      <p className="text-gray-600">
-                        = <strong>une base de données acquéreurs sans équivalent</strong>
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-4">
-                    <span className="font-bold text-2xl text-blue-600">•</span>
-                    <div>
-                      <p className="text-gray-800 font-semibold mb-2">
-                        <strong>5 métiers supports</strong> : juridique / marketing / financier / administratif / conseil
-                      </p>
-                      <p className="text-gray-600">
-                        = <strong>une offre de services complète</strong> pour accompagner nos clients vendeurs et acquéreurs
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-4">
-                    <span className="font-bold text-2xl text-blue-600">•</span>
-                    <div>
-                      <p className="text-gray-800 font-semibold mb-2">
-                        <strong>1000+ mandats</strong> de vente en stock, <strong>950+ projets actés</strong> en 2024, <strong>1,3 ventes/jour</strong> en moyenne
-                      </p>
-                      <p className="text-gray-600">
-                        = <strong>n°1 lyonnais</strong> en nombre de transactions
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mt-8 pt-6 border-t border-gray-200">
-                  <p className="text-gray-700 mb-4">
-                    Et pour répondre à l&apos;ensemble de vos besoins en immobilier, César et Brutus, ce sont aussi des équipes qui vous accompagnent en :
-                  </p>
-                  <ul className="text-gray-600 space-y-2">
-                    <li>• Location et gestion locative</li>
-                    <li>• Syndic de copropriété</li>
-                    <li>• Courtage en financement et courtage en travaux</li>
-                  </ul>
-                </div>
-
-                <div className="mt-8">
-                  <p className="text-gray-800 font-semibold text-lg">
-                    N&apos;hésitez pas à me contacter pour en savoir plus !
-                  </p>
-                </div>
+              <div className="mt-8">
+                <p className="text-gray-800 font-semibold text-lg">
+                  N&apos;hésitez pas à me contacter pour en savoir plus !
+                </p>
               </div>
             </div>
           </div>
