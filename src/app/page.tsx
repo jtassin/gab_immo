@@ -137,16 +137,16 @@ export default function Home() {
                 onClick={() => {
                   setIsModalOpen(true);
                   mixpanel.track("CTA Clicked", {
-                    button: "Estimation Gratuite",
+                    button: "Demande d'estimation",
                     location: "Hero Section"
                   });
                   trackModal('contact', 'open');
                 }}
                 className="bg-white text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors duration-300 shadow-lg cursor-pointer"
-                ctaName="Estimation Gratuite"
+                ctaName="Demande d'estimation"
                 location="Hero"
               >
-                Estimation Gratuite
+                Demande d&apos;estimation
               </TrackedButton>
           </div>
         </div>
@@ -491,7 +491,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Avis de nos clients
+              Avis clients
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Découvrez ce que disent nos clients satisfaits sur Google
