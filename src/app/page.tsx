@@ -59,8 +59,8 @@ export default function Home() {
 
   return (
     <GA4Tracker>
-      <div className="min-h-screen bg-white">
-            {/* Navigation */}
+    <div className="min-h-screen bg-white">
+      {/* Navigation */}
       <nav className="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
@@ -76,6 +76,7 @@ export default function Home() {
                 <TrackedLink href="#chiffres" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Chiffres</TrackedLink>
                 {/* Lien vers la section des quartiers - présente l'expertise géographique sur Lyon */}
                 <TrackedLink href="#quartiers" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Quartiers</TrackedLink>
+                <TrackedLink href="#agence" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">L&apos;agence</TrackedLink>
                 <TrackedLink href="#avis" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Avis</TrackedLink>
                 <TrackedLink href="#contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Contact</TrackedLink>
               </div>
@@ -104,6 +105,7 @@ export default function Home() {
                 <TrackedLink href="#chiffres" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md" onClick={() => setIsMobileMenuOpen(false)}>Chiffres</TrackedLink>
                 {/* Lien vers la section des quartiers - présente l'expertise géographique sur Lyon */}
                 <TrackedLink href="#quartiers" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md" onClick={() => setIsMobileMenuOpen(false)}>Quartiers</TrackedLink>
+                <TrackedLink href="#agence" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md" onClick={() => setIsMobileMenuOpen(false)}>L&apos;agence</TrackedLink>
                 <TrackedLink href="#avis" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md" onClick={() => setIsMobileMenuOpen(false)}>Avis</TrackedLink>
                 <TrackedLink href="#contact" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md" onClick={() => setIsMobileMenuOpen(false)}>Contact</TrackedLink>
               </div>
@@ -155,7 +157,7 @@ export default function Home() {
       {/* Section Agent */}
       <section id="agent" className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                                <div className="text-center mb-16">
+          <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Qui suis-je ?
             </h2>
@@ -164,7 +166,7 @@ export default function Home() {
             </p>
           </div>
           
-                    <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <div className="text-center">
                 <div className="w-80 h-96 mx-auto overflow-hidden">
@@ -276,7 +278,7 @@ export default function Home() {
               <div className="text-3xl font-bold text-purple-600 mb-2">5</div>
               <div className="text-base text-gray-800 font-medium">1 vente toutes les 5 visites</div>
               <div className="text-sm text-gray-600 mt-2">En moyenne en 2025</div>
-            </div>
+              </div>
 
             <div className="text-center p-6 bg-white/95 rounded-xl shadow-xl border border-white">
               <div className="text-3xl font-bold text-orange-600 mb-2">52</div>
@@ -321,7 +323,7 @@ export default function Home() {
                   <div className="absolute bottom-3 right-3 bg-white bg-opacity-95 rounded-lg px-3 py-2 shadow-lg">
                     <span className="text-gray-800 text-sm font-bold">2 564 - 5 454 €/m²</span>
                   </div>
-                </div>
+              </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Plateau de Saint Rambert</h3>
               <p className="text-gray-600 mb-4">
                 Quartier résidentiel calme et familial au nord de Lyon. Maisons individuelles, 
@@ -353,10 +355,10 @@ export default function Home() {
                 </div>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Vaise Industrie</h3>
-                              <p className="text-gray-600 mb-4">
+              <p className="text-gray-600 mb-4">
                   Quartier en pleine transformation, anciennement industriel.
                   Appartements récents, bureaux, espaces de coworking dans un environnement dynamique.
-                </p>
+              </p>
               <div className="text-sm text-gray-500">
                 <p>• Type : Appartements (principalement récents)</p>
                 <p>• Atouts : Modernité et dynamisme</p>
@@ -381,11 +383,11 @@ export default function Home() {
                   <div className="absolute bottom-3 right-3 bg-white bg-opacity-95 rounded-lg px-3 py-2 shadow-lg">
                     <span className="text-gray-800 text-sm font-bold">1 837 - 3 544 €/m²</span>
                   </div>
-                </div>
+              </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Saint Rambert le Vergoin</h3>
-                              <p className="text-gray-600 mb-4">
+              <p className="text-gray-600 mb-4">
                                      A la pointe nord de la commune de Lyon, limitrophe des communes de Saint-Cyr-au-Mont-d&apos;Or et de Collonges-au-Mont-d&apos;Or, le Vergoin est un quartier vivant en pleine mutation.
-                </p>
+              </p>
               <div className="text-sm text-gray-500">
                 <p>• Type : Maisons et appartements</p>
                 <p>• Atouts : Verdure et prix accessible</p>
@@ -480,6 +482,101 @@ export default function Home() {
               <div className="text-sm text-gray-500">
                 <p>• Type : Maisons et appartements</p>
                 <p>• Atouts : Transport et prix accessible</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section L'agence César et Brutus */}
+      <section id="agence" className="py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              L&apos;agence César et Brutus Lyon
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Indépendante mais pas seule !
+            </p>
+          </div>
+
+          <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-100">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              {/* Image de l'équipe */}
+              <div className="order-2 lg:order-1">
+                <div className="relative rounded-lg overflow-hidden">
+                  <Image
+                    src="/equipe-cesar-brutus.jpg"
+                    alt="Équipe César et Brutus Lyon - 120 conseillers immobiliers"
+                    width={600}
+                    height={400}
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+              </div>
+
+              {/* Contenu texte */}
+              <div className="order-1 lg:order-2">
+                <p className="text-gray-700 text-lg leading-relaxed mb-8">
+                  Je suis indépendante et je serai votre interlocutrice dédiée tout au long de votre projet, 
+                  pour autant, vous bénéficierez de tous les services et outils ainsi que de l&apos;incroyable 
+                  force de frappe commerciale du groupe <a href="https://www.cesaretbrutus.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">César et Brutus</a> dont je fais partie :
+                </p>
+
+                <div className="space-y-6">
+                  <div className="flex items-start space-x-4">
+                    <span className="font-bold text-2xl text-blue-600">•</span>
+                    <div>
+                      <p className="text-gray-800 font-semibold mb-2">
+                        <strong>120 conseillers immobiliers</strong> qui travaillent dans le partage
+                      </p>
+                      <p className="text-gray-600">
+                        = <strong>une base de données acquéreurs sans équivalent</strong>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-4">
+                    <span className="font-bold text-2xl text-blue-600">•</span>
+                    <div>
+                      <p className="text-gray-800 font-semibold mb-2">
+                        <strong>5 métiers supports</strong> : juridique / marketing / financier / administratif / conseil
+                      </p>
+                      <p className="text-gray-600">
+                        = <strong>une offre de services complète</strong> pour accompagner nos clients vendeurs et acquéreurs
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-4">
+                    <span className="font-bold text-2xl text-blue-600">•</span>
+                    <div>
+                      <p className="text-gray-800 font-semibold mb-2">
+                        <strong>1000+ mandats</strong> de vente en stock, <strong>950+ projets actés</strong> en 2024, <strong>1,3 ventes/jour</strong> en moyenne
+                      </p>
+                      <p className="text-gray-600">
+                        = <strong>n°1 lyonnais</strong> en nombre de transactions
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-8 pt-6 border-t border-gray-200">
+                  <p className="text-gray-700 mb-4">
+                    Et pour répondre à l&apos;ensemble de vos besoins en immobilier, César et Brutus, ce sont aussi des équipes qui vous accompagnent en :
+                  </p>
+                  <ul className="text-gray-600 space-y-2">
+                    <li>• Location et gestion locative</li>
+                    <li>• Syndic de copropriété</li>
+                    <li>• Courtage en financement et courtage en travaux</li>
+                  </ul>
+                </div>
+
+                <div className="mt-8">
+                  <p className="text-gray-800 font-semibold text-lg">
+                    N&apos;hésitez pas à me contacter pour en savoir plus !
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -776,7 +873,7 @@ export default function Home() {
           </div>
         </div>
       )}
-      </div>
+    </div>
     </GA4Tracker>
   );
 }
