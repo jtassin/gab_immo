@@ -306,6 +306,7 @@ export default function Home() {
             <div 
               className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300"
               onMouseEnter={() => trackNeighborhoodView('Plateau de Saint Rambert')}
+              onClick={() => trackNeighborhoodClick('Plateau de Saint Rambert')}
             >
                 <div className="w-full h-48 rounded-lg mb-4 overflow-hidden relative">
                                   <Image
@@ -336,6 +337,7 @@ export default function Home() {
             <div 
               className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300"
               onMouseEnter={() => trackNeighborhoodView('Vaise Industrie')}
+              onClick={() => trackNeighborhoodClick('Vaise Industrie')}
             >
               <div className="w-full h-48 rounded-lg mb-4 overflow-hidden relative">
                 <Image 
@@ -365,6 +367,7 @@ export default function Home() {
               <div 
                 className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300"
                 onMouseEnter={() => trackNeighborhoodView('Saint Rambert le Vergoin')}
+                onClick={() => trackNeighborhoodClick('Saint Rambert le Vergoin')}
               >
                 <div className="w-full h-48 rounded-lg mb-4 overflow-hidden relative">
                   <Image
@@ -393,6 +396,7 @@ export default function Home() {
             <div 
               className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300"
               onMouseEnter={() => trackNeighborhoodView('Vaise')}
+              onClick={() => trackNeighborhoodClick('Vaise')}
             >
               <div className="w-full h-48 rounded-lg mb-4 overflow-hidden relative">
                 <Image
@@ -422,6 +426,7 @@ export default function Home() {
             <div 
               className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300"
               onMouseEnter={() => trackNeighborhoodView('Valmy')}
+              onClick={() => trackNeighborhoodClick('Valmy')}
             >
               <div className="w-full h-48 rounded-lg mb-4 overflow-hidden relative">
                 <Image
@@ -451,6 +456,7 @@ export default function Home() {
             <div 
               className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300"
               onMouseEnter={() => trackNeighborhoodView('Champvert')}
+              onClick={() => trackNeighborhoodClick('Champvert')}
             >
               <div className="w-full h-48 rounded-lg mb-4 overflow-hidden relative">
                 <Image
