@@ -178,7 +178,7 @@ export default function Home() {
               <div className="text-center">
                 <div className="w-80 h-96 mx-auto overflow-hidden">
                   <Image 
-                    src="/Gabrielle_veste_BD-removebg-preview.png"
+                    src="/gabrielle-nicolini.jpg"
                     alt="Gabrielle Nicolini - Spécialiste Immobilier Lyon 9ème - Expert des quartiers Vaise, Valmy, Saint Rambert et Champvert"
                     width={320}
                     height={384}

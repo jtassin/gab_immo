@@ -40,11 +40,11 @@ export const metadata: Metadata = {
             siteName: "Gabrielle Nicolini Immobilier",
             images: [
               {
-                url: "https://www.gabriellenicolini.immo/Gabrielle_veste_BD-removebg-preview.png",
+                url: "https://www.gabriellenicolini.immo/gabrielle-nicolini.jpg",
                 width: 320,
                 height: 384,
                 alt: "Gabrielle Nicolini - Agent Immobilier Lyon 9ème",
-                type: "image/png"
+                type: "image/jpeg"
               }
             ],
           },
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
             card: "summary_large_image",
             title: "Gabrielle Nicolini - Spécialiste Immobilier Lyon 9ème",
             description: "Expertise immobilière à Lyon : Vaise, Valmy, Saint Rambert, Champvert. Estimation gratuite et accompagnement personnalisé.",
-            images: ["https://www.gabriellenicolini.immo/Gabrielle_veste_BD-removebg-preview.png"],
+            images: ["https://www.gabriellenicolini.immo/gabrielle-nicolini.jpg"],
           },
   alternates: {
     canonical: "https://www.gabriellenicolini.immo",
@@ -116,7 +116,7 @@ export default function RootLayout({
                 "Mo-Fr 09:00-19:00",
                 "Sa 09:00-13:00"
               ],
-              "image": "https://www.gabriellenicolini.immo/Gabrielle_veste_BD-removebg-preview.png",
+              "image": "https://www.gabriellenicolini.immo/gabrielle-nicolini.jpg",
               "sameAs": [
                 "https://www.linkedin.com/in/gabrielle-nicolini",
                 "https://www.facebook.com/gabrielle.nicolini.kw/"
