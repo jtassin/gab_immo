@@ -195,14 +195,13 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
 
               <div>
                 <label htmlFor="bedrooms" className="block text-sm font-medium text-gray-700 mb-2">
-                  Nombre de pièces *
+                  Nombre de pièces
                 </label>
                 <select
                   id="bedrooms"
                   name="bedrooms"
                   value={bedrooms}
                   onChange={(e) => setBedrooms(e.target.value)}
-                  required
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors bg-white text-gray-900"
                 >
                   <option value="">Sélectionnez le nombre de pièces</option>
