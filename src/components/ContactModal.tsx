@@ -13,6 +13,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
   const { trackModal } = useGoogleAnalytics();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [type, setType] = useState("");
   const [address, setAddress] = useState("");
   const [bedrooms, setBedrooms] = useState("");
@@ -34,6 +35,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
     // Reset form state when closing
     setName("");
     setEmail("");
+    setPhone("");
     setType("");
     setAddress("");
     setBedrooms("");
@@ -60,6 +62,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
       body: JSON.stringify({ 
         name,
         email,
+        phone,
         type,
         message,
         address, 
@@ -137,6 +140,22 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
                   required
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors text-gray-900 placeholder:text-gray-500"
                   placeholder="votre.email@example.com"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                  Téléphone *
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                  required
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors text-gray-900 placeholder:text-gray-500"
+                  placeholder="06 12 34 56 78"
                 />
               </div>
 
