@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { GA4Tracker, TrackedButton, TrackedLink, useNeighborhoodTracking } from "../components/GA4Tracker";
-import { useGoogleAnalytics } from "../hooks/useGoogleAnalytics";
+import { useAnalytics } from "../hooks/useAnalytics";
 import { ContactModal } from "../components/ContactModal";
 
 interface Avis {
@@ -21,7 +21,7 @@ export default function Home() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [avisAleatoires, setAvisAleatoires] = useState<Avis[]>([]);
   const { trackNeighborhoodView, trackNeighborhoodClick } = useNeighborhoodTracking();
-  const { trackSocialMedia, trackReview, trackModal } = useGoogleAnalytics();
+  const analytics = useAnalytics();
   
   useEffect(() => {
     // Charger et sélectionner 3 avis au hasard
@@ -137,7 +137,7 @@ export default function Home() {
                           <TrackedButton 
                 onClick={() => {
                   setIsModalOpen(true);
-                  trackModal('contact', 'open');
+                  analytics.trackModal('contact', 'open');
                 }}
                 className="bg-white text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors duration-300 shadow-lg cursor-pointer"
                 ctaName="Demande d'estimation"
@@ -514,7 +514,7 @@ export default function Home() {
               <p className="text-gray-700 text-lg leading-relaxed mb-8">
                 Je suis indépendante et je serai votre interlocutrice dédiée tout au long de votre projet, 
                 pour autant, vous bénéficierez de tous les services et outils ainsi que de l&apos;incroyable 
-                force de frappe commerciale du groupe <a href="https://www.cesaretbrutus.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline" onClick={() => trackSocialMedia('cesar-brutus-website', 'click')}>César et Brutus</a> dont je fais partie :
+                force de frappe commerciale du groupe <a href="https://www.cesaretbrutus.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline" onClick={() => analytics.trackSocialMedia('cesar-brutus-website', 'click')}>César et Brutus</a> dont je fais partie :
               </p>
 
               <div className="space-y-6">
@@ -593,7 +593,7 @@ export default function Home() {
               <div 
                 key={avis.id} 
                 className="bg-white rounded-lg shadow-lg p-6 border border-gray-100"
-                onMouseEnter={() => trackReview('view', avis.id)}
+                onMouseEnter={() => analytics.trackReview('view', avis.id)}
               >
                 <div className="flex items-center mb-4">
                   <div className="flex text-yellow-400 text-lg">
@@ -715,7 +715,7 @@ export default function Home() {
               <TrackedButton 
                 onClick={() => {
                   setIsModalOpen(true);
-                  trackModal('contact', 'open');
+                  analytics.trackModal('contact', 'open');
                 }}
                 className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300 cursor-pointer"
                 ctaName="Réserver un créneau"
@@ -765,7 +765,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-blue-500 transition-colors duration-300"
                 aria-label="Profil LinkedIn de Gabrielle Nicolini"
-                onClick={() => trackSocialMedia('linkedin', 'click')}
+                onClick={() => analytics.trackSocialMedia('linkedin', 'click')}
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.047-1.032-3.047-1.032 0-1.26 1.317-1.26 3.031v5.585H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
@@ -777,7 +777,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-blue-600 transition-colors duration-300"
                 aria-label="Page Facebook de Gabrielle Nicolini"
-                onClick={() => trackSocialMedia('facebook', 'click')}
+                onClick={() => analytics.trackSocialMedia('facebook', 'click')}
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>

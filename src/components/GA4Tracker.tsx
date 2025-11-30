@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from 'react';
-import { useGoogleAnalytics } from '../hooks/useGoogleAnalytics';
+import { useAnalytics } from '../hooks/useAnalytics';
 
 interface GA4TrackerProps {
   children: React.ReactNode;
@@ -9,12 +9,12 @@ interface GA4TrackerProps {
 
 // Composant pour tracker automatiquement les interactions
 export const GA4Tracker: React.FC<GA4TrackerProps> = ({ children }) => {
-  const { trackPageView, trackSectionScroll } = useGoogleAnalytics();
+  const analytics = useAnalytics();
   const observerRef = useRef<IntersectionObserver | null>(null);
 
   useEffect(() => {
     // Tracker la vue de page initiale
-    trackPageView({
+    analytics.trackPageView({
       page_title: document.title,
       page_location: window.location.href,
       page_path: window.location.pathname,
@@ -29,7 +29,7 @@ export const GA4Tracker: React.FC<GA4TrackerProps> = ({ children }) => {
           if (entry.isIntersecting) {
             const sectionId = entry.target.id;
             if (sectionId) {
-              trackSectionScroll(sectionId);
+              analytics.trackSectionScroll(sectionId);
             }
           }
         });
@@ -52,7 +52,7 @@ export const GA4Tracker: React.FC<GA4TrackerProps> = ({ children }) => {
         observerRef.current.disconnect();
       }
     };
-  }, [trackPageView, trackSectionScroll]);
+  }, [analytics]);
 
   return <>{children}</>;
 };
@@ -64,11 +64,11 @@ export const TrackedLink: React.FC<{
   className?: string;
   onClick?: () => void;
 }> = ({ href, children, className, onClick }) => {
-  const { trackEvent } = useGoogleAnalytics();
+  const analytics = useAnalytics();
 
   const handleClick = () => {
     // Tracker le clic sur le lien
-    trackEvent({
+    analytics.trackEvent({
       action: 'internal_link_click',
       category: 'navigation',
       label: href,
@@ -95,11 +95,11 @@ export const TrackedButton: React.FC<{
   ctaName: string;
   location: string;
 }> = ({ children, onClick, className, ctaName, location }) => {
-  const { trackCTA } = useGoogleAnalytics();
+  const analytics = useAnalytics();
 
   const handleClick = () => {
     // Tracker le clic sur le CTA
-    trackCTA(ctaName, location);
+    analytics.trackCTA(ctaName, location);
 
     // Appeler le onClick personnalisé s'il existe
     if (onClick) {
@@ -116,14 +116,14 @@ export const TrackedButton: React.FC<{
 
 // Hook pour tracker les interactions avec les quartiers
 export const useNeighborhoodTracking = () => {
-  const { trackNeighborhood } = useGoogleAnalytics();
+  const analytics = useAnalytics();
 
   const trackNeighborhoodView = (neighborhood: string) => {
-    trackNeighborhood(neighborhood, 'view');
+    analytics.trackNeighborhood(neighborhood, 'view');
   };
 
   const trackNeighborhoodClick = (neighborhood: string) => {
-    trackNeighborhood(neighborhood, 'click');
+    analytics.trackNeighborhood(neighborhood, 'click');
   };
 
   return {
