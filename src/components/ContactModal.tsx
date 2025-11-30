@@ -1,7 +1,6 @@
 "use client";
 
-import { useState } from "react";
-import mixpanel from "mixpanel-browser";
+import { useState, useEffect } from "react";
 import { useGoogleAnalytics } from "../hooks/useGoogleAnalytics";
 
 interface ContactModalProps {
@@ -10,7 +9,7 @@ interface ContactModalProps {
 }
 
 export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
-  const { trackModal } = useGoogleAnalytics();
+  const { trackModal, trackEvent } = useGoogleAnalytics();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -24,13 +23,16 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
+  // Track modal opening
+  useEffect(() => {
+    if (isOpen) {
+      trackModal('contact', 'open');
+    }
+  }, [isOpen, trackModal]);
+
   if (!isOpen) return null;
 
   const handleClose = () => {
-    mixpanel.track("Modal Closed", {
-      modal: "Contact",
-      duration: "N/A"
-    });
     trackModal('contact', 'close');
     // Reset form state when closing
     setName("");
@@ -81,15 +83,23 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
       })
       .then(() => {
         setSuccessMessage("Votre message a été envoyé avec succès ! Je vous répondrai dans les plus brefs délais.");
-        mixpanel.track("Contact Form Submitted", {
-          modal: "Contact",
-          success: true
+        trackEvent({
+          action: 'form_submit',
+          category: 'conversion',
+          label: 'contact_form',
+          value: 1
         });
         setIsSubmitting(false);
       })
       .catch((error) => {
         console.error("Error:", error);
         setErrorMessage("Une erreur est survenue. Veuillez réessayer ou me contacter directement par téléphone ou email.");
+        trackEvent({
+          action: 'form_error',
+          category: 'conversion',
+          label: 'contact_form',
+          value: 0
+        });
         setIsSubmitting(false);
       });
   };

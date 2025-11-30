@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import mixpanel from "mixpanel-browser";
 import { GA4Tracker, TrackedButton, TrackedLink, useNeighborhoodTracking } from "../components/GA4Tracker";
 import { useGoogleAnalytics } from "../hooks/useGoogleAnalytics";
 import { ContactModal } from "../components/ContactModal";
@@ -24,15 +23,7 @@ export default function Home() {
   const { trackNeighborhoodView, trackNeighborhoodClick } = useNeighborhoodTracking();
   const { trackSocialMedia, trackReview, trackModal } = useGoogleAnalytics();
   
-  // Initialisation de Mixpanel
   useEffect(() => {
-    mixpanel.init("c763b02ec15098b02c46034afde3a6b8", {
-      debug: process.env.NODE_ENV === "development",
-      track_pageview: true,
-      persistence: "localStorage",
-      autocapture:true
-    });
-
     // Charger et sélectionner 3 avis au hasard
     fetch('/avis.json')
       .then(response => response.json())
@@ -146,10 +137,6 @@ export default function Home() {
                           <TrackedButton 
                 onClick={() => {
                   setIsModalOpen(true);
-                  mixpanel.track("CTA Clicked", {
-                    button: "Demande d'estimation",
-                    location: "Hero Section"
-                  });
                   trackModal('contact', 'open');
                 }}
                 className="bg-white text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors duration-300 shadow-lg cursor-pointer"
@@ -728,10 +715,6 @@ export default function Home() {
               <TrackedButton 
                 onClick={() => {
                   setIsModalOpen(true);
-                  mixpanel.track("CTA Clicked", {
-                    button: "Réserver un créneau",
-                    location: "Contact Section"
-                  });
                   trackModal('contact', 'open');
                 }}
                 className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300 cursor-pointer"

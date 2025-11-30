@@ -9,9 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@amplitude/analytics-browser": "^2.31.3",
     "@next/third-parties": "^15.4.7",
     "@vercel/analytics": "^1.5.0",
-    "mixpanel-browser": "^2.68.0",
     "next": "15.4.6",
     "react": "19.1.0",
     "react-dom": "19.1.0"
