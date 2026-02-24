@@ -68,6 +68,14 @@ export class GoogleAnalyticsProvider implements AnalyticsProvider {
     });
   }
 
+  trackListingsClick(location: string): void {
+    this.trackEvent({
+      action: 'listings_click',
+      category: 'engagement',
+      label: location,
+    });
+  }
+
   trackReview(action: 'view' | 'click', reviewId?: number): void {
     this.trackEvent({
       action: `review_${action}`,

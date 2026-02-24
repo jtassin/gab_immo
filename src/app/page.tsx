@@ -75,6 +75,7 @@ export default function Home() {
                 <TrackedLink href="#chiffres" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Chiffres</TrackedLink>
                 {/* Lien vers la section des quartiers - présente l'expertise géographique sur Lyon */}
                 <TrackedLink href="#quartiers" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Quartiers</TrackedLink>
+                <a href="https://www.cesaretbrutus.com/agent/gabrielle-nicolini/#listings" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" onClick={() => analytics.trackListingsClick('menu')}>Mes annonces</a>
                 <TrackedLink href="#agence" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">L&apos;agence</TrackedLink>
                 <TrackedLink href="#avis" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Avis</TrackedLink>
                 <TrackedLink href="#contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Contact</TrackedLink>
@@ -104,6 +105,7 @@ export default function Home() {
                 <TrackedLink href="#chiffres" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md" onClick={() => setIsMobileMenuOpen(false)}>Chiffres</TrackedLink>
                 {/* Lien vers la section des quartiers - présente l'expertise géographique sur Lyon */}
                 <TrackedLink href="#quartiers" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md" onClick={() => setIsMobileMenuOpen(false)}>Quartiers</TrackedLink>
+                <a href="https://www.cesaretbrutus.com/agent/gabrielle-nicolini/#listings" target="_blank" rel="noopener noreferrer" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md" onClick={() => { setIsMobileMenuOpen(false); analytics.trackListingsClick('menu'); }}>Mes annonces</a>
                 <TrackedLink href="#agence" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md" onClick={() => setIsMobileMenuOpen(false)}>L&apos;agence</TrackedLink>
                 <TrackedLink href="#avis" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md" onClick={() => setIsMobileMenuOpen(false)}>Avis</TrackedLink>
                 <TrackedLink href="#contact" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md" onClick={() => setIsMobileMenuOpen(false)}>Contact</TrackedLink>
@@ -479,6 +481,32 @@ export default function Home() {
                 <p>• Atouts : Transport et prix accessible</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section Mes annonces */}
+      <section id="annonces" className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Mes annonces
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+              Découvrez les biens que je propose actuellement à la vente sur le site de l&apos;agence César et Brutus.
+            </p>
+            <a
+              href="https://www.cesaretbrutus.com/agent/gabrielle-nicolini/#listings"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-6 py-4 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300"
+              onClick={() => analytics.trackListingsClick('section')}
+            >
+              <span className="mr-2">Voir toutes mes annonces</span>
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+              </svg>
+            </a>
           </div>
         </div>
       </section>

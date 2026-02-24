@@ -68,6 +68,16 @@ export class MultiProvider implements AnalyticsProvider {
     });
   }
 
+  trackListingsClick(location: string): void {
+    this.providers.forEach((provider) => {
+      try {
+        provider.trackListingsClick(location);
+      } catch (error) {
+        console.error('Error tracking listings click in provider:', error);
+      }
+    });
+  }
+
   trackReview(action: 'view' | 'click', reviewId?: number): void {
     this.providers.forEach((provider) => {
       try {

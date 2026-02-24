@@ -20,6 +20,7 @@ export interface AnalyticsProvider {
   trackNeighborhood(neighborhood: string, action: 'view' | 'click'): void;
   trackModal(modalType: string, action: 'open' | 'close'): void;
   trackSocialMedia(platform: string, action: 'click'): void;
+  trackListingsClick(location: string): void;
   trackReview(action: 'view' | 'click', reviewId?: number): void;
   trackSectionScroll(sectionName: string): void;
 }
