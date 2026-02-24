@@ -16,12 +16,33 @@ interface Avis {
   couleur: string;
 }
 
+interface Listing {
+  title: string;
+  price: string;
+  city: string;
+  postalCode: string;
+  surface: string;
+  bedrooms: string;
+  ref: string;
+  url: string;
+  imageUrl: string | null;
+  excerpt: string;
+}
+
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [avisAleatoires, setAvisAleatoires] = useState<Avis[]>([]);
+  const [listingsLyon9, setListingsLyon9] = useState<Listing[]>([]);
   const { trackNeighborhoodView, trackNeighborhoodClick } = useNeighborhoodTracking();
   const analytics = useAnalytics();
+  
+  useEffect(() => {
+    fetch('/annonces-lyon9.json')
+      .then((res) => res.json())
+      .then((data) => setListingsLyon9(data.listings || []))
+      .catch(() => setListingsLyon9([]));
+  }, []);
   
   useEffect(() => {
     // Charger et sélectionner 3 avis au hasard
@@ -75,7 +96,7 @@ export default function Home() {
                 <TrackedLink href="#chiffres" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Chiffres</TrackedLink>
                 {/* Lien vers la section des quartiers - présente l'expertise géographique sur Lyon */}
                 <TrackedLink href="#quartiers" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Quartiers</TrackedLink>
-                <a href="https://www.cesaretbrutus.com/agent/gabrielle-nicolini/#listings" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium" onClick={() => analytics.trackListingsClick('menu')}>Mes annonces</a>
+                <TrackedLink href="#annonces" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Mes annonces</TrackedLink>
                 <TrackedLink href="#agence" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">L&apos;agence</TrackedLink>
                 <TrackedLink href="#avis" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Avis</TrackedLink>
                 <TrackedLink href="#contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Contact</TrackedLink>
@@ -105,7 +126,7 @@ export default function Home() {
                 <TrackedLink href="#chiffres" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md" onClick={() => setIsMobileMenuOpen(false)}>Chiffres</TrackedLink>
                 {/* Lien vers la section des quartiers - présente l'expertise géographique sur Lyon */}
                 <TrackedLink href="#quartiers" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md" onClick={() => setIsMobileMenuOpen(false)}>Quartiers</TrackedLink>
-                <a href="https://www.cesaretbrutus.com/agent/gabrielle-nicolini/#listings" target="_blank" rel="noopener noreferrer" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md" onClick={() => { setIsMobileMenuOpen(false); analytics.trackListingsClick('menu'); }}>Mes annonces</a>
+                <TrackedLink href="#annonces" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md" onClick={() => setIsMobileMenuOpen(false)}>Mes annonces</TrackedLink>
                 <TrackedLink href="#agence" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md" onClick={() => setIsMobileMenuOpen(false)}>L&apos;agence</TrackedLink>
                 <TrackedLink href="#avis" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md" onClick={() => setIsMobileMenuOpen(false)}>Avis</TrackedLink>
                 <TrackedLink href="#contact" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md" onClick={() => setIsMobileMenuOpen(false)}>Contact</TrackedLink>
@@ -485,16 +506,66 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section Mes annonces */}
-      <section id="annonces" className="py-24 bg-white">
+      {/* Section Mes annonces - Biens Lyon 9 */}
+      <section id="annonces" className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Mes annonces
+              Mes annonces Lyon 9
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
-              Découvrez les biens que je propose actuellement à la vente sur le site de l&apos;agence César et Brutus.
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Découvrez les biens que je propose à la vente dans le 9ème sur le site de l&apos;agence César et Brutus.
             </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {listingsLyon9.map((listing) => (
+              <a
+                key={listing.ref || listing.url}
+                href="https://www.cesaretbrutus.com/agent/gabrielle-nicolini/#listings"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300"
+                onClick={() => analytics.trackListingsClick('card')}
+              >
+                <div className="w-full h-48 rounded-lg mb-4 overflow-hidden relative bg-gray-200">
+                  {listing.imageUrl ? (
+                    <Image
+                      src={listing.imageUrl}
+                      alt={listing.title}
+                      width={400}
+                      height={192}
+                      className="w-full h-full object-cover"
+                      unoptimized
+                    />
+                  ) : (
+                    <Image
+                      src="/interior-living-room.jpg"
+                      alt=""
+                      width={400}
+                      height={192}
+                      className="w-full h-full object-cover"
+                    />
+                  )}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-40" />
+                  <div className="absolute bottom-3 right-3 bg-white bg-opacity-95 rounded-lg px-3 py-2 shadow-lg">
+                    <span className="text-gray-800 text-sm font-bold">{listing.price}</span>
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">{listing.title}</h3>
+                <p className="text-gray-600 mb-4 line-clamp-2">
+                  {listing.excerpt || `${listing.city} – ${listing.surface}`}
+                </p>
+                <div className="text-sm text-gray-500">
+                  <p>• {[listing.surface, listing.bedrooms && `${listing.bedrooms} ch.`].filter(Boolean).join(" – ") || "–"}</p>
+                  <p>• {listing.postalCode} {listing.city}</p>
+                  {listing.ref ? <p>• Réf. {listing.ref}</p> : null}
+                </div>
+              </a>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
             <a
               href="https://www.cesaretbrutus.com/agent/gabrielle-nicolini/#listings"
               target="_blank"

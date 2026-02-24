@@ -1,0 +1,84 @@
+---
+description: Mettre à jour les annonces Lyon 9 (données statiques). Utiliser quand il faut modifier la liste des biens affichés sur le site, ajouter/retirer une annonce, ou synchroniser avec les offres César & Brutus.
+globs: public/annonces-lyon9.json
+---
+
+# Annonces Lyon 9 – Données statiques
+
+L’unique source de vérité pour les annonces affichées sur le site est le fichier **`public/annonces-lyon9.json`**. Il n’y a ni script ni route API : tout est servi en statique.
+
+## Schéma du fichier
+
+```json
+{
+  "updatedAt": "ISO 8601 (optionnel)",
+  "listings": [
+    {
+      "title": "string",
+      "price": "string (ex: \"280 000 €\")",
+      "city": "string",
+      "postalCode": "string (ex: \"69009\")",
+      "surface": "string (ex: \"111.74 m²\")",
+      "bedrooms": "string (ex: \"5\")",
+      "ref": "string (ex: \"GN-9509-CESARETBRUTUS69\")",
+      "url": "string (URL fiche sur cesaretbrutus.com)",
+      "imageUrl": "string | null (URL absolue de l'image principale du bien)",
+      "excerpt": "string (court résumé)"
+    }
+  ]
+}
+```
+
+## Comment mettre à jour
+
+### 1. Récupérer la liste des biens (plusieurs pages)
+
+La liste de l’agent est **paginée**. Il faut consulter **toutes les pages** pour avoir la liste complète :
+
+- **Page 1** : https://www.cesaretbrutus.com/agent/gabrielle-nicolini/
+- **Page 2** : https://www.cesaretbrutus.com/agent/gabrielle-nicolini/?paged-1=2
+- **Page 3** : https://www.cesaretbrutus.com/agent/gabrielle-nicolini/?paged-1=3
+- etc.
+
+Continuer tant qu’il y a des annonces (ex. « 1 - 6 of 13 », « 7 - 12 of 13 », « 13 - 13 of 13 »). Ne garder que les biens dont le **code postal est 69009** (Lyon 9). Pour chaque bien, noter : titre, prix, ville, code postal, surface, chambres, référence, **URL de la fiche détaillée** (lien vers la page du bien sur cesaretbrutus.com).
+
+### 2. Récupérer les images (fiche détaillée de chaque bien)
+
+Les images de la **liste agent** ne sont en général pas les bonnes ou pas exposées correctement. Il faut récupérer l’image **depuis la fiche détaillée** de chaque bien :
+
+1. Pour chaque bien Lyon 9, ouvrir l’**URL de la fiche** (le champ `url` du listing, ex. `https://www.cesaretbrutus.com/property/...`).
+2. Sur cette page, l’**image principale** du bien se trouve en priorité dans :
+   - la balise **`<meta property="og:image" content="https://...">`** dans le `<head>` (vignette de partage) ;
+   - sinon la **première image** de la galerie / du slider.
+3. Utiliser cette URL **complète** (https://…) pour le champ **`imageUrl`** dans le JSON. Si l’URL est relative, la préfixer avec `https://www.cesaretbrutus.com`.
+4. Si aucune image exploitable n’est trouvée (page chargée en JS, structure différente), mettre **`imageUrl: null`** : le site affichera l’image par défaut (`/interior-living-room.jpg`).
+
+Pour obtenir `og:image` sans navigateur : récupérer le HTML de la fiche (fetch/curl) et parser la balise `<meta property="og:image" content="…">`.
+
+### 3. Éditer le JSON
+
+- Remplir ou mettre à jour **`listings`** avec les biens Lyon 9 (titre, price, city, postalCode, surface, bedrooms, ref, url, **imageUrl**, excerpt).
+- Mettre à jour **`updatedAt`** avec la date courante en ISO 8601 (ex. `new Date().toISOString()`).
+
+### 4. Images et Next.js
+
+Si `imageUrl` pointe vers `https://www.cesaretbrutus.com/...`, le composant Next `Image` utilise déjà `unoptimized` pour ces URLs. Si besoin d’optimisation, ajouter le domaine dans `next.config.js` :
+
+```js
+images: {
+  remotePatterns: [
+    { protocol: 'https', hostname: 'www.cesaretbrutus.com', pathname: '/**' },
+  ],
+},
+```
+
+## Affichage côté site
+
+La page d’accueil charge **`/annonces-lyon9.json`** et affiche les cartes dans la section « Mes annonces Lyon 9 ». Chaque carte pointe vers `url` (ouverture dans un nouvel onglet). Si `imageUrl` est présent, il est affiché ; sinon, l’image par défaut est utilisée.
+
+## À ne pas faire
+
+- Ne pas recréer de script de mise à jour ni de route API pour les annonces.
+- Ne pas s’appuyer uniquement sur la première page de la liste agent : toujours parcourir **toutes les pages**.
+- Ne pas utiliser les images de la liste agent : prendre les images depuis la **fiche détaillée** de chaque bien (og:image ou première image).
+- Ne pas déplacer ni dupliquer ce JSON : un seul fichier, **`public/annonces-lyon9.json`**.

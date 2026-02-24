@@ -1,0 +1,41 @@
+{
+  "updatedAt": "2026-02-24T21:15:00.000Z",
+  "listings": [
+    {
+      "title": "Grand appartement familial, 5 chambres, balcon et stationnement",
+      "price": "280 000 €",
+      "city": "Lyon",
+      "postalCode": "69009",
+      "surface": "111.74 m²",
+      "bedrooms": "5",
+      "ref": "GN-9509-CESARETBRUTUS69",
+      "url": "https://www.cesaretbrutus.com/property/grand-appartement-familial-5-chambres-balcon-et-stationnement/",
+      "imageUrl": "https://www.cesaretbrutus.com/wp-content/uploads/2026/02/1771431507_VA29428_2_original.jpg",
+      "excerpt": "NOUVEAUTÉ – Appartement spacieux et confortable."
+    },
+    {
+      "title": "Appartement à vendre Lyon",
+      "price": "340 000 €",
+      "city": "Lyon",
+      "postalCode": "69009",
+      "surface": "117.44 m²",
+      "bedrooms": "4",
+      "ref": "GN-9217-CESARETBRUTUS69",
+      "url": "https://www.cesaretbrutus.com/property/appartement-a-vendre-lyon/",
+      "imageUrl": "https://www.cesaretbrutus.com/wp-content/uploads/2026/02/1767904634_VA28434_20_original-1024x683.jpg",
+      "excerpt": "NOUVEAUTÉ – Je vous propose à la vente, dans le 9ème."
+    },
+    {
+      "title": "Appartement à vendre Lyon",
+      "price": "250 000 €",
+      "city": "Lyon",
+      "postalCode": "69009",
+      "surface": "87.70 m²",
+      "bedrooms": "3",
+      "ref": "GN-9050-CESARETBRUTUS69",
+      "url": "https://www.cesaretbrutus.com/bien/appartement-a-vendre-lyon-gn-9050-cesaretbrutus69/",
+      "imageUrl": "https://www.cesaretbrutus.com/wp-content/uploads/2026/02/1764353321_VA28152_6_original.jpg",
+      "excerpt": "NOUVEAUTÉ – Grand T4 de 88 m², St Rambert Lyon 9, balcon au calme."
+    }
+  ]
+}
