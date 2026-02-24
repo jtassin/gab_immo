@@ -11,13 +11,10 @@ interface ContactModalProps {
 export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
   const analytics = useAnalytics();
   const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [type, setType] = useState("");
   const [address, setAddress] = useState("");
-  const [bedrooms, setBedrooms] = useState("");
   const [surface, setSurface] = useState("");
-  const [condition, setCondition] = useState("");
   const [message, setMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -36,13 +33,10 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
     analytics.trackModal('contact', 'close');
     // Reset form state when closing
     setName("");
-    setEmail("");
     setPhone("");
     setType("");
     setAddress("");
-    setBedrooms("");
     setSurface("");
-    setCondition("");
     setMessage("");
     setSuccessMessage("");
     setErrorMessage("");
@@ -63,14 +57,11 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
       },
       body: JSON.stringify({ 
         name,
-        email,
         phone,
         type,
         message,
         address, 
-        bedrooms, 
-        surface, 
-        condition 
+        surface 
       }),
     })
       .then((response) => {
@@ -138,22 +129,6 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                  Email *
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors text-gray-900 placeholder:text-gray-500"
-                  placeholder="votre.email@example.com"
-                />
-              </div>
-
-              <div>
                 <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
                   Téléphone *
                 </label>
@@ -204,28 +179,6 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
               </div>
 
               <div>
-                <label htmlFor="bedrooms" className="block text-sm font-medium text-gray-700 mb-2">
-                  Nombre de pièces
-                </label>
-                <select
-                  id="bedrooms"
-                  name="bedrooms"
-                  value={bedrooms}
-                  onChange={(e) => setBedrooms(e.target.value)}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors bg-white text-gray-900"
-                >
-                  <option value="">Sélectionnez le nombre de pièces</option>
-                  <option value="0">0</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="5+">5+</option>
-                </select>
-              </div>
-
-              <div>
                 <label htmlFor="surface" className="block text-sm font-medium text-gray-700 mb-2">
                   Taille en m²
                 </label>
@@ -240,25 +193,6 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors text-gray-900 placeholder:text-gray-500"
                   placeholder="Ex: 65"
                 />
-              </div>
-
-              <div>
-                <label htmlFor="condition" className="block text-sm font-medium text-gray-700 mb-2">
-                  État du bien
-                </label>
-                <select
-                  id="condition"
-                  name="condition"
-                  value={condition}
-                  onChange={(e) => setCondition(e.target.value)}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors bg-white text-gray-900"
-                >
-                  <option value="">Sélectionnez un état</option>
-                  <option value="Neuf">Neuf</option>
-                  <option value="Rénové">Rénové</option>
-                  <option value="État d'usage">État d&apos;usage</option>
-                  <option value="À rénover">À rénover</option>
-                </select>
               </div>
 
               <div>
