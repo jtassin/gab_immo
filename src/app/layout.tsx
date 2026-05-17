@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Dancing_Script, Crimson_Text } from "next/font/google";
 import { GoogleAnalytics } from '@next/third-parties/google'
+import Script from "next/script";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -126,6 +127,19 @@ export default function RootLayout({
         />
       </body>
       <GoogleAnalytics gaId="G-BYEZFSGM8G" />
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=AW-18169939549"
+        strategy="afterInteractive"
+      />
+      <Script id="google-ads" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-18169939549');
+        `}
+      </Script>
     </html>
   );
 }
